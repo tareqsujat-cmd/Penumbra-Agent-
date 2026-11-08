@@ -1,0 +1,248 @@
+/*
+ * Instrument design tokens: a generic design system for dense scientific interfaces.
+ * Pre-event preparation (allowed: "design a generic design system"). Contains no product logic.
+ *
+ * Layers: 1) primitives (raw values)  2) semantic roles (what the UI uses)  3) themes.
+ * Components should only read semantic roles (--surface-*, --text-*, --border-*, --accent-*, ...).
+ * Fonts are self-hosted from ./fonts (SIL OFL 1.1) so everything works offline.
+ */
+
+/* Space-age type, all SIL OFL 1.1, self-hosted:
+   Michroma (Vernon Adams; after Microgramma/Eurostile, the 1960s "typeface of the future") for display,
+   Space Grotesk (Florian Karsten) for the interface, Space Mono (Colophon) for telemetry and numbers. */
+@font-face {
+  font-family: "Michroma";
+  src: url("../assets/fonts/michroma-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../assets/fonts/space-grotesk-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../assets/fonts/space-mono-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../assets/fonts/space-mono-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- 1. primitives ---------- */
+  /* Cool neutral ramp, tuned for long viewing on dark canvases (L* roughly evenly spaced). */
+  --n-0: #07090c;
+  --n-50: #0b0f14;
+  --n-100: #10151d;
+  --n-150: #151c26;
+  --n-200: #1b2431;
+  --n-300: #253142;
+  --n-400: #344257;
+  --n-500: #52617a;
+  --n-600: #7a879d;
+  --n-700: #a3aec0;
+  --n-800: #cfd6e1;
+  --n-900: #edf0f5;
+  --n-1000: #ffffff;
+
+  --blue-300: #8db8ff;
+  --blue-400: #5f9bff;
+  --blue-500: #3b7ff5;
+  --blue-600: #2b64cf;
+
+  /* Okabe-Ito categorical set (colour-blind safe). Assign meaning per product, once. */
+  --cat-black: #000000;
+  --cat-orange: #e69f00;
+  --cat-sky: #56b4e9;
+  --cat-green: #009e73;
+  --cat-yellow: #f0e442;
+  --cat-blue: #0072b2;
+  --cat-vermillion: #d55e00;
+  --cat-purple: #cc79a7;
+
+  /* cividis, 9 stops (exact, from matplotlib's cividis at i/8): perceptually uniform and readable with colour-vision deficiency. Use for magnitude maps. */
+  --seq-0: #00224e;
+  --seq-1: #1a386f;
+  --seq-2: #434e6c;
+  --seq-3: #61656f;
+  --seq-4: #7d7c78;
+  --seq-5: #9b9476;
+  --seq-6: #bcae6c;
+  --seq-7: #dec958;
+  --seq-8: #fee838;
+  --seq-gradient: linear-gradient(90deg, var(--seq-0), var(--seq-1), var(--seq-2), var(--seq-3), var(--seq-4),
+      var(--seq-5), var(--seq-6), var(--seq-7), var(--seq-8));
+
+  /* ---------- type ---------- */
+  --font-ui: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --font-display: "Michroma", "Space Grotesk", system-ui, sans-serif;
+
+  /* Productive scale (dense UI). Readouts use --fs-readout* with tabular numerals. */
+  --fs-2xs: 0.75rem; /* 12 px: axis ticks, overlines */
+  --fs-xs: 0.8125rem; /* 13 px: captions, legends */
+  --fs-sm: 0.875rem; /* 14 px: dense body, controls */
+  --fs-md: 0.9375rem; /* 15 px: body */
+  --fs-lg: 1rem; /* 16 px: panel titles */
+  --fs-xl: 1.25rem; /* 20 px: section titles */
+  --fs-readout: 1.75rem; /* 28 px: key numbers */
+  --fs-readout-lg: 2.5rem; /* 40 px: hero number */
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-body: 1.5;
+  --tracking-overline: 0.08em;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* ---------- space, size, shape ---------- */
+  --sp-0: 0;
+  --sp-1: 2px;
+  --sp-2: 4px;
+  --sp-3: 8px;
+  --sp-4: 12px;
+  --sp-5: 16px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 48px;
+  --sp-9: 64px;
+  --control-h-sm: 28px;
+  --control-h-md: 34px;
+  --control-h-lg: 42px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  /* ---------- motion (explain change; never decorate) ---------- */
+  --dur-instant: 80ms;
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 360ms;
+  --dur-reveal: 640ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1.1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* ---------- layers ---------- */
+  --z-map-overlay: 10;
+  --z-panel: 20;
+  --z-sticky: 30;
+  --z-popover: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+
+  /* ---------- 2. semantic roles: dark theme (default) ---------- */
+  --surface-canvas: var(--n-0);
+  --surface-base: var(--n-50);
+  --surface-panel: var(--n-100);
+  --surface-raised: var(--n-150);
+  --surface-overlay: var(--n-200);
+  --surface-inset: #05070a;
+  --surface-hover: rgba(255, 255, 255, 0.045);
+  --surface-pressed: rgba(255, 255, 255, 0.08);
+  --surface-selected: rgba(95, 155, 255, 0.14);
+
+  --text-primary: var(--n-900);
+  --text-secondary: var(--n-700);
+  --text-tertiary: var(--n-600);
+  --text-disabled: var(--n-500);
+  --text-inverse: var(--n-0);
+  --text-link: var(--blue-300);
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --accent: var(--blue-400);
+  --accent-hover: var(--blue-300);
+  --accent-pressed: var(--blue-500);
+  --accent-fg: #06121f;
+  --accent-soft: rgba(95, 155, 255, 0.16);
+  --focus-ring: 0 0 0 2px var(--surface-canvas), 0 0 0 4px var(--blue-300);
+
+  --status-ok: #3fb68b;
+  --status-warn: #e0a526;
+  --status-danger: #ef5b52;
+  --status-info: var(--cat-sky);
+  --status-ok-soft: rgba(63, 182, 139, 0.14);
+  --status-warn-soft: rgba(224, 165, 38, 0.14);
+  --status-danger-soft: rgba(239, 91, 82, 0.14);
+  --status-info-soft: rgba(86, 180, 233, 0.14);
+
+  /* Provenance states for any number shown: verified (from a source), computed (derived by code),
+     assumption (user-editable input). Assumptions must be visually distinct wherever they appear. */
+  --prov-verified: #6fc3a0;
+  --prov-computed: var(--n-700);
+  --prov-assumption: #f0b73e;
+  --prov-assumption-soft: rgba(240, 183, 62, 0.12);
+
+  --shadow-popover: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--border-default);
+  --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--border-default);
+
+  color-scheme: dark;
+}
+
+/* ---------- 3. light theme (print, export, bright rooms) ---------- */
+:root[data-theme="light"] {
+  --surface-canvas: #f4f6f9;
+  --surface-base: #f8f9fb;
+  --surface-panel: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-inset: #eef1f5;
+  --surface-hover: rgba(10, 20, 40, 0.04);
+  --surface-pressed: rgba(10, 20, 40, 0.08);
+  --surface-selected: rgba(43, 100, 207, 0.1);
+
+  --text-primary: #0e141c;
+  --text-secondary: #3c4758;
+  --text-tertiary: #5c687b;
+  --text-disabled: #9aa4b3;
+  --text-inverse: #ffffff;
+  --text-link: var(--blue-600);
+
+  --border-subtle: rgba(10, 20, 40, 0.06);
+  --border-default: rgba(10, 20, 40, 0.12);
+  --border-strong: rgba(10, 20, 40, 0.22);
+
+  --accent: var(--blue-600);
+  --accent-hover: var(--blue-500);
+  --accent-pressed: #1f4fa8;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(43, 100, 207, 0.1);
+  --focus-ring: 0 0 0 2px var(--surface-canvas), 0 0 0 4px var(--blue-500);
+
+  --status-ok: #1d8a63;
+  --status-warn: #a86f00;
+  --status-danger: #c8322a;
+  --status-info: #0072b2;
+  --prov-verified: #1d8a63;
+  --prov-computed: #3c4758;
+  --prov-assumption: #9a6400;
+  --prov-assumption-soft: rgba(154, 100, 0, 0.1);
+
+  --shadow-popover: 0 8px 24px rgba(10, 20, 40, 0.12), 0 0 0 1px var(--border-default);
+  --shadow-modal: 0 24px 64px rgba(10, 20, 40, 0.18), 0 0 0 1px var(--border-default);
+
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant: 0ms;
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+    --dur-reveal: 0ms;
+  }
+}

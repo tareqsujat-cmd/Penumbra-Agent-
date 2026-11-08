@@ -1,0 +1,1141 @@
+{
+ "generated_utc": "2026-10-01T12:20:25Z",
+ "note": "Raw public NASA/JPL files used by Penumbra (hard links under data/raw). Checksums: SHA-256.",
+ "groups": [
+  {
+   "id": "lola_ldem_80m",
+   "title": "NASA LRO LOLA gridded DEM LDEM_80S_80M (south polar)",
+   "source": "NASA PDS Geosciences Node, LRO LOLA RDR/GDR v1",
+   "product_page": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/",
+   "frame": "MOON_ME, mean Earth/polar axis of DE421 (label: \"MEAN EARTH/POLAR AXIS OF DE421\")",
+   "projection": "Polar stereographic (south), sphere R = 1737.4 km; 7600 x 7600, int16 DN, height = DN x 0.5 m above 1737.4 km",
+   "resolution": "80 m/pixel",
+   "version": "PRODUCT_VERSION_ID V2.0, created 2017-06-15 (from the .lbl)",
+   "usage": "Intermediate terrain for horizons (about 3-150 km)",
+   "files": [
+    {
+     "path": "data/raw/lola/ldem_80s_80m.img",
+     "bytes": 115520000,
+     "sha256": "e6591eeea35402ca5e124ca00f5bf0774381a2d4fa919144b455d82b8ff65fdc",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_80s_80m.img"
+    },
+    {
+     "path": "data/raw/lola/ldem_80s_80m.lbl",
+     "bytes": 4986,
+     "sha256": "107c7558cbf8832e4119d3c8c2b1b272623344275c85378a9b0e03c22876eb33",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_80s_80m.lbl"
+    }
+   ]
+  },
+  {
+   "id": "lola_ldem_240m",
+   "title": "NASA LRO LOLA gridded DEM LDEM_75S_240M (south polar)",
+   "source": "NASA PDS Geosciences Node, LRO LOLA RDR/GDR v1",
+   "product_page": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/",
+   "frame": "MOON_ME, mean Earth/polar axis of DE421 (label: \"MEAN EARTH/POLAR AXIS OF DE421\")",
+   "projection": "Polar stereographic (south), sphere R = 1737.4 km; 3812 x 3812, int16 DN, height = DN x 0.5 m above 1737.4 km",
+   "resolution": "240 m/pixel",
+   "version": "PRODUCT_VERSION_ID V2.0, created 2017-06-15 (from the .lbl)",
+   "usage": "Far terrain for horizons (about 150-300 km); covers 75-90 S",
+   "files": [
+    {
+     "path": "data/raw/lola/ldem_75s_240m.img",
+     "bytes": 29062688,
+     "sha256": "d031efe2611b17dfbf3c158f5e15dc04cd5719349dcbf6384bb21fd97697c490",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_75s_240m.img"
+    },
+    {
+     "path": "data/raw/lola/ldem_75s_240m.lbl",
+     "bytes": 4990,
+     "sha256": "ec07239f41d8abc1a3681495b5799b770c7206b5268b76721d69180df0422e02",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_75s_240m.lbl"
+    }
+   ]
+  },
+  {
+   "id": "pgda69_visibility",
+   "title": "NASA PGDA product 69: average Sun and Earth visibility, south pole (Mazarico et al. 2011)",
+   "source": "NASA GSFC PGDA product 69; files served from imbrium.mit.edu/EXTRAS/ILLUMINATION",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/69",
+   "frame": "MOON_ME, mean Earth/polar axis of DE421 (label: \"MEAN EARTH/POLAR AXIS OF DE421\")",
+   "projection": "Polar stereographic (south), sphere R = 1737.4 km; 7624 x 7624, int16 DN, value = DN x 0.00004",
+   "resolution": "120 m/pixel",
+   "version": "PRODUCT_VERSION_ID V1.05, created 2016-09-15 (from the .LBL)",
+   "usage": "Independent validation only (never used as model input)",
+   "files": [
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608.IMG",
+     "bytes": 116250752,
+     "sha256": "a354543b62871227a5066077f5ac61ed7e8dabd5268eb5a5aa4b147aa5bba61e",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608.IMG"
+    },
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608.LBL",
+     "bytes": 4092,
+     "sha256": "1b597f85822c20e349469c9499e7bd85a48efc3a23b9dd9d82b658e59192883c",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608.LBL"
+    },
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608_EARTH.IMG",
+     "bytes": 116250752,
+     "sha256": "443ad251a480dea19e96417dfcfe1cb87a91eb02ee158b262d78abe899258fff",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608_EARTH.IMG"
+    },
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608_EARTH.LBL",
+     "bytes": 4112,
+     "sha256": "86eabf4611eaf18c4e9b170b205d517b014ec9e694bc93c80d693caf7c0ca015",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608_EARTH.LBL"
+    }
+   ]
+  },
+  {
+   "id": "pgda78_site01",
+   "title": "NASA PGDA product 78: 5 m LOLA site DEM, Site01 (Connecting Ridge)",
+   "source": "NASA GSFC Planetary Geodesy Data Archive, product 78 (Barker et al. 2021, PSS 203:105119)",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/78",
+   "frame": "MOON_ME of ephemeris DE421 (README: \"south polar stereographic X/Y coords in meters, MOON_ME reference frame of ephemeris DE421\")",
+   "projection": "Polar stereographic (south), metres; pixel-registered GeoTIFF, float32",
+   "resolution": "5 m/pixel",
+   "version": "Files as served on the download date (no version string in file names)",
+   "usage": "Near-site terrain (0-3 km) for horizons; landing-zone metrics; slope layer; terrain-error propagation via clones",
+   "files": [
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_slperr.tif",
+     "bytes": 40980810,
+     "sha256": "52bc3b239f61605e6bb98bab6d6b17acd22389c59e57336862157f2fbd643a33",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_slperr.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0001_err.tif",
+     "bytes": 40987165,
+     "sha256": "242de9e3da624a276864cc4fa7c499e96981c95fd27583565e68e92434faf05b",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0001_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0002_err.tif",
+     "bytes": 40987165,
+     "sha256": "97b2c05633e308c72eddfc5a337089836d80b5edb7469321976973f7eeb7dcad",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0002_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0003_err.tif",
+     "bytes": 40987165,
+     "sha256": "2e79f90fcc6b28b06cc5524ac80601ace4ed2ea3b875e18deede92903b64f06c",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0003_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0004_err.tif",
+     "bytes": 40987161,
+     "sha256": "447667f3ab461e246196698c882fe154ecc4388621bf07f7b04b93150f68aaa0",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0004_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0005_err.tif",
+     "bytes": 40987163,
+     "sha256": "252306940146d35a362978aab45f81d2351ef5d097c791a291b68a970d9af51b",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0005_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0006_err.tif",
+     "bytes": 40987165,
+     "sha256": "5eb7ec40a17a6639826aec7b44e4713f77b9a547a90fa0450389cafcc67c3ec0",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0006_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0007_err.tif",
+     "bytes": 40987165,
+     "sha256": "d484e8cb8ee6e0489bd625ac6c17f540310fcd664b78993557411d3fc1f90046",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0007_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0008_err.tif",
+     "bytes": 40987165,
+     "sha256": "ef3c8c17151b4edef013aa51f404f682ce88deec4e9c5df5ffa5ef7d831e8543",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0008_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0009_err.tif",
+     "bytes": 40987153,
+     "sha256": "18e5edd9fee02bfe1995fea80546dcf90e91986c2ed6d05d4d17519c0a9c2309",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0009_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0010_err.tif",
+     "bytes": 40987165,
+     "sha256": "1b7f56fa87d6b98a520eeaf869d5b9a0a4df7092fa8b91e4f294c75ddecfb816",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0010_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0011_err.tif",
+     "bytes": 40987165,
+     "sha256": "a3ef788e076b604ff46ce9484fb854bacee9cd5ed36b486d850a5828f0a04843",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0011_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0012_err.tif",
+     "bytes": 40987163,
+     "sha256": "da0fc5c26820b91c7c5b05e43a432364cb60771fd611a71c22c0f803b63239e7",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0012_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0013_err.tif",
+     "bytes": 40987159,
+     "sha256": "1164bc9ae9f22dc152d1f24dd88f8fd06a2d028c3d2aeae6eb80e8367fbb9544",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0013_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0014_err.tif",
+     "bytes": 40987159,
+     "sha256": "8dcbca4caf7ae240b1e99528e677b0aa75b62a446dfe92150d0117b0f39d05f2",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0014_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0015_err.tif",
+     "bytes": 40987157,
+     "sha256": "c3973b5a6345aa84b94f9f8b49b4d727bd0972703e4d99de3d0c70c492913ad4",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0015_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0016_err.tif",
+     "bytes": 40987165,
+     "sha256": "eb4b540491536af43051942f6f44d52db4b603a19bdaeecc0de609645e86e943",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0016_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0017_err.tif",
+     "bytes": 40987165,
+     "sha256": "1c55d36933f156f6c305e1621fbf6471ba7a00e6bdd66eb2f91f3b43c0328b32",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0017_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0018_err.tif",
+     "bytes": 40987165,
+     "sha256": "b2fead63eace85f1dfa90d7da65d0fb084e321850126697cd824cd6263406b45",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0018_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0019_err.tif",
+     "bytes": 40987165,
+     "sha256": "47d201a05a8e9992452fb48ef3418c56aa4c6745f271d398e2310c3ec4bd5fff",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0019_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0020_err.tif",
+     "bytes": 40987165,
+     "sha256": "a93a9d516548b71d88ca0a218f1c9ecd2e7fb00843eff24628c46ea4d89237b9",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0020_err.tif"
+    }
+   ]
+  },
+  {
+   "id": "pgda78_site04",
+   "title": "NASA PGDA product 78: 5 m LOLA site DEM, Site04 (Shackleton rim)",
+   "source": "NASA GSFC Planetary Geodesy Data Archive, product 78 (Barker et al. 2021, PSS 203:105119)",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/78",
+   "frame": "MOON_ME of ephemeris DE421 (README: \"south polar stereographic X/Y coords in meters, MOON_ME reference frame of ephemeris DE421\")",
+   "projection": "Polar stereographic (south), metres; pixel-registered GeoTIFF, float32",
+   "resolution": "5 m/pixel",
+   "version": "Files as served on the download date (no version string in file names)",
+   "usage": "Near-site terrain (0-3 km) for horizons; landing-zone metrics; slope layer; terrain-error propagation via clones",
+   "files": [
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_slperr.tif",
+     "bytes": 40980806,
+     "sha256": "067cd4d8e3e8c14a9a5be1915242532f85063f1b300f248407cc8c8b68e90695",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_slperr.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0001_err.tif",
+     "bytes": 40987161,
+     "sha256": "8d6efbddbfde8aa98a4a2454b6f79636ce307138360f3b38b6243cb76a585963",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0001_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0002_err.tif",
+     "bytes": 40987159,
+     "sha256": "a3b58f9000a75c7ed0156ee8222a8bcd66112748fbe8d89fc2de7e248d41bf0f",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0002_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0003_err.tif",
+     "bytes": 40987161,
+     "sha256": "07dad75a48f1f4acf9f9084408bcf0bb3a80a0a5368613da425ad462baad8c89",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0003_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0004_err.tif",
+     "bytes": 40987161,
+     "sha256": "afbf332aa43af39c60791a3d80bd7ba77f46eb3785af02555b402da2145c99df",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0004_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0005_err.tif",
+     "bytes": 40987159,
+     "sha256": "425abb287b1348700dca1ced607d4027a17e832b9efdd576e36e64b1d58ca2b3",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0005_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0006_err.tif",
+     "bytes": 40987153,
+     "sha256": "1ac036b5d0d089f94b0fe884fac42b86f1b0fec1f0c555e893d05dc715f22a52",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0006_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0007_err.tif",
+     "bytes": 40987157,
+     "sha256": "61319ed8b5af3c861d02ef0710216eca9806c4c44cb630266ab1a4761c1e41cf",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0007_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0008_err.tif",
+     "bytes": 40987161,
+     "sha256": "afcf8359689006776e5cfaae87ebc9a013600927f144f706d9e3a9d6c83c4c2a",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0008_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0009_err.tif",
+     "bytes": 40987157,
+     "sha256": "f3bf0719df2c656fe7bbd0f2abf0e2fcaf9d4ef6514c30b0e98a24f36a5a74e2",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0009_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0010_err.tif",
+     "bytes": 40987153,
+     "sha256": "3e522f9679850de3efe3154e3f65c5c624ff32e0e08b215e42aa1ebcd89ddb80",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0010_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0011_err.tif",
+     "bytes": 40987159,
+     "sha256": "997d62055e7d36fdbaeddc994b07d575f1e787372541ac6f85eebf331cb4fd7f",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0011_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0012_err.tif",
+     "bytes": 40987157,
+     "sha256": "0f946b7939ddae8f68387000f5c5abb80a4f43c239f9c03da60cc40271752efd",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0012_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0013_err.tif",
+     "bytes": 40987161,
+     "sha256": "bb4629840f10d37afe25f51b044199c6094ed1581c8acf02826c6bab92c3afd4",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0013_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0014_err.tif",
+     "bytes": 40987161,
+     "sha256": "49161ccf69f48ef0aedb7928251153f2b5d37d92fbd4dd9f0081d7c453e9452d",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0014_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0015_err.tif",
+     "bytes": 40987157,
+     "sha256": "7f0dcfce01e02680a541ead656158fc162b784ae6119f78ce72e29111278c72d",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0015_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0016_err.tif",
+     "bytes": 40987153,
+     "sha256": "d3ffb8ba3163b73d967f38a452d685058eb4905316cb606f8b823f3eff83ede4",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0016_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0017_err.tif",
+     "bytes": 40987157,
+     "sha256": "ebe4f04d78a5304350aa74418e9e1ed27de78e1968e21c86972b74d57d03184f",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0017_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0018_err.tif",
+     "bytes": 40987161,
+     "sha256": "53b9a7ddd81f7e1eb1ff85e90340a6b90fa4d5c81967f8aed8afde8370f1bb88",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0018_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0019_err.tif",
+     "bytes": 40987161,
+     "sha256": "dbe66df5699c21a72bdf4b556db541dea03eae878ee6d9c19bcfcbe0c7a0e9d4",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0019_err.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0020_err.tif",
+     "bytes": 40987161,
+     "sha256": "99aca2e8044a7f01456391392f0299ffc3c95fa7d31b42faa04e542e811b3333",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0020_err.tif"
+    }
+   ]
+  },
+  {
+   "id": "pgda78_site20",
+   "title": "NASA PGDA product 78: 5 m LOLA site DEM, Site20 (Leibnitz beta plateau / Mons Mouton)",
+   "source": "NASA GSFC Planetary Geodesy Data Archive, product 78 (Barker et al. 2021, PSS 203:105119)",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/78",
+   "frame": "MOON_ME of ephemeris DE421 (README: \"south polar stereographic X/Y coords in meters, MOON_ME reference frame of ephemeris DE421\")",
+   "projection": "Polar stereographic (south), metres; pixel-registered GeoTIFF, float32",
+   "resolution": "5 m/pixel",
+   "version": "Files as served on the download date (no version string in file names)",
+   "usage": "Near-site terrain (0-3 km) for horizons; landing-zone metrics; slope layer; terrain-error propagation via clones",
+   "files": [
+    {
+     "path": "data/raw/pgda78/Site20/Site20_final_adj_5mpp_surf.tif",
+     "bytes": 40980802,
+     "sha256": "e51451f3629ba7cd5cfc1b32c8c0ee3c5c454607488b00ea00cd06a9e301a892",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site20/Site20_final_adj_5mpp_surf.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site20/Site20_final_adj_5mpp_toterr.tif",
+     "bytes": 40980809,
+     "sha256": "3600dcb6dde91cec86cb8d350a620391e828097a46026031d3638b4b3b46367a",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site20/Site20_final_adj_5mpp_toterr.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site20/Site20_final_adj_5mpp_slp.tif",
+     "bytes": 40980772,
+     "sha256": "1e3c09698e731c6ed5ed153a0a39bed79536cebf45d699d198e8fd647d1d561e",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site20/Site20_final_adj_5mpp_slp.tif"
+    }
+   ]
+  },
+  {
+   "id": "pgda78_site06",
+   "title": "NASA PGDA product 78: 5 m LOLA site DEM, Site06 (Nobile rim 1)",
+   "source": "NASA GSFC Planetary Geodesy Data Archive, product 78 (Barker et al. 2021, PSS 203:105119)",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/78",
+   "frame": "MOON_ME of ephemeris DE421 (README: \"south polar stereographic X/Y coords in meters, MOON_ME reference frame of ephemeris DE421\")",
+   "projection": "Polar stereographic (south), metres; pixel-registered GeoTIFF, float32",
+   "resolution": "5 m/pixel",
+   "version": "Files as served on the download date (no version string in file names)",
+   "usage": "Near-site terrain (0-3 km) for horizons; landing-zone metrics; slope layer; terrain-error propagation via clones",
+   "files": [
+    {
+     "path": "data/raw/pgda78/Site06/Site06_final_adj_5mpp_surf.tif",
+     "bytes": 64025603,
+     "sha256": "cca17e8067601dd659b583f889204db6bce685bc30c60a9e62427a8bce36b03d",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site06/Site06_final_adj_5mpp_surf.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site06/Site06_final_adj_5mpp_toterr.tif",
+     "bytes": 64025607,
+     "sha256": "997c7d2d7ae6a74a1d5c38411cf30a414b1a83474b6b3c3a7b1cb32ef675661e",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site06/Site06_final_adj_5mpp_toterr.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site06/Site06_final_adj_5mpp_slp.tif",
+     "bytes": 64025573,
+     "sha256": "47db26dc18aa8f253a7d281ccf86189bb8dfd2b33b8a5b7c20586e4877c24e0c",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site06/Site06_final_adj_5mpp_slp.tif"
+    }
+   ]
+  },
+  {
+   "id": "pgda78_site23",
+   "title": "NASA PGDA product 78: 5 m LOLA site DEM, Site23 (Malapert massif)",
+   "source": "NASA GSFC Planetary Geodesy Data Archive, product 78 (Barker et al. 2021, PSS 203:105119)",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/78",
+   "frame": "MOON_ME of ephemeris DE421 (README: \"south polar stereographic X/Y coords in meters, MOON_ME reference frame of ephemeris DE421\")",
+   "projection": "Polar stereographic (south), metres; pixel-registered GeoTIFF, float32",
+   "resolution": "5 m/pixel",
+   "version": "Files as served on the download date (no version string in file names)",
+   "usage": "Near-site terrain (0-3 km) for horizons; landing-zone metrics; slope layer; terrain-error propagation via clones",
+   "files": [
+    {
+     "path": "data/raw/pgda78/Site23/Site23_final_adj_5mpp_surf.tif",
+     "bytes": 70586804,
+     "sha256": "12d280a59cd7580415f6bada638d0abe025ce6727541fddf68d5dc371a6c94cf",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site23/Site23_final_adj_5mpp_surf.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site23/Site23_final_adj_5mpp_toterr.tif",
+     "bytes": 70586811,
+     "sha256": "fe08539cfa3a0f7bb4ddf15dd7e0835fae0c761d516b2157d51116311a1ff69d",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site23/Site23_final_adj_5mpp_toterr.tif"
+    },
+    {
+     "path": "data/raw/pgda78/Site23/Site23_final_adj_5mpp_slp.tif",
+     "bytes": 70586810,
+     "sha256": "e2b41c65a9c9044d359f634e706b71fa187dbe7d9f271d5410cbd81d68eadb91",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site23/Site23_final_adj_5mpp_slp.tif"
+    }
+   ]
+  },
+  {
+   "id": "pgda78_readme",
+   "title": "PGDA product 78 README (file formats, clones)",
+   "source": "NASA GSFC PGDA",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/78",
+   "frame": "n/a",
+   "projection": "n/a",
+   "resolution": "n/a",
+   "version": "As served on download date",
+   "usage": "Reference for layer definitions and the clone method",
+   "files": [
+    {
+     "path": "data/raw/docs/PGDA78_README.txt",
+     "bytes": 1829,
+     "sha256": "e985a2337c9de1cd665b0ddad8b7f1fac88d65c96d1e47d1b975a91c8e53e7bd",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/README"
+    }
+   ]
+  },
+  {
+   "id": "naif_spice",
+   "title": "NAIF SPICE generic kernels (Sun, Earth, Moon orientation, DSN stations)",
+   "source": "NASA JPL NAIF generic_kernels",
+   "product_page": "https://naif.jpl.nasa.gov/naif/data_generic.html",
+   "frame": "MOON_ME: via moon_de440_250416.tf (DE440 lunar orientation; MOON_ME alias) and, for exact DE421 consistency with LOLA/PGDA, moon_080317.tf + moon_pa_de421_1900-2050.bpc + moon_assoc_me.tf. Earth: ITRF93 via earth_*.bpc; DSN station topocentric frames via earth_topo_260814.tf",
+   "projection": "n/a",
+   "resolution": "n/a",
+   "version": "Kernel names carry their release dates (e.g. 250416, 260806, 260814)",
+   "usage": "Primary offline ephemeris: Sun and Earth vectors in MOON_ME; DSN station positions (ITRF93) for geometric visibility. JPL Horizons stays the online cross-check.",
+   "files": [
+    {
+     "path": "data/raw/spice/naif0012.tls",
+     "bytes": 5257,
+     "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls"
+    },
+    {
+     "path": "data/raw/spice/pck00011.tpc",
+     "bytes": 131226,
+     "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc"
+    },
+    {
+     "path": "data/raw/spice/gm_de440.tpc",
+     "bytes": 12406,
+     "sha256": "924ddf4fb9ead9fe8a1aa55780bcabde40b09d00065d58226e24b68d8092f140",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/gm_de440.tpc"
+    },
+    {
+     "path": "data/raw/spice/de440s.bsp",
+     "bytes": 32726016,
+     "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp"
+    },
+    {
+     "path": "data/raw/spice/moon_pa_de440_200625.bpc",
+     "bytes": 12863488,
+     "sha256": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de440_200625.bpc"
+    },
+    {
+     "path": "data/raw/spice/moon_de440_250416.tf",
+     "bytes": 19478,
+     "sha256": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_de440_250416.tf"
+    },
+    {
+     "path": "data/raw/spice/moon_pa_de421_1900-2050.bpc",
+     "bytes": 1770496,
+     "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de421_1900-2050.bpc"
+    },
+    {
+     "path": "data/raw/spice/moon_080317.tf",
+     "bytes": 21437,
+     "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_080317.tf"
+    },
+    {
+     "path": "data/raw/spice/moon_assoc_me.tf",
+     "bytes": 8468,
+     "sha256": "52c622043ce0447d575e59ee01642f1894921e68c10f934ceff065f362da6c1c",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_assoc_me.tf"
+    },
+    {
+     "path": "data/raw/spice/earth_latest_high_prec.bpc",
+     "bytes": 5138432,
+     "sha256": "9fee39503b9fdb3eed05a7092f84ff5a53379bab09214fd7a562a8124239a017",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc"
+    },
+    {
+     "path": "data/raw/spice/earth_2026_260806_2126_predict.bpc",
+     "bytes": 19169280,
+     "sha256": "9f565ab5aaccd33afe54f3a1b20cb8b136636c31a0bd4c0986fac722b931c280",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_2026_260806_2126_predict.bpc"
+    },
+    {
+     "path": "data/raw/spice/earth_assoc_itrf93.tf",
+     "bytes": 7522,
+     "sha256": "aab7bbc19b8a69bad11988ee1b4812a3963812a03a029c2776863e680719b336",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/planets/earth_assoc_itrf93.tf"
+    },
+    {
+     "path": "data/raw/spice/earth_topo_260814.tf",
+     "bytes": 69400,
+     "sha256": "4f40cd1e86718047bc8ea6ff6bd063c9fbf36102b63f0dca370c8e94fd282490",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/stations/earth_topo_260814.tf"
+    },
+    {
+     "path": "data/raw/spice/earthstns_itrf93_260814.bsp",
+     "bytes": 26624,
+     "sha256": "007eb0aad5dd022c6d61bdbfb2395680bd1eb31c49a8637d0b0a1cfbea737c6b",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/stations/earthstns_itrf93_260814.bsp"
+    }
+   ]
+  },
+  {
+   "id": "reference_documents",
+   "title": "Reference documents for the offline demo and validation",
+   "source": "NASA JPL DSN; NASA NTRS",
+   "product_page": "see each file url",
+   "frame": "n/a",
+   "projection": "n/a",
+   "resolution": "n/a",
+   "version": "See each document",
+   "usage": "DSN station coordinates and elevation masks (810-005 module 301 Rev. P, 22 May 2026); validation references (Barker 2021, Gläser 2018)",
+   "files": [
+    {
+     "path": "data/raw/docs/DSN_810-005_301P.pdf",
+     "bytes": 2745535,
+     "sha256": "53d8c28eddde48a2212b403422689a11fc0ff75fcab830a1e2ec00cdf8a4e160",
+     "url": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf"
+    },
+    {
+     "path": "data/raw/docs/Barker2021_Improved_LOLA_south_pole.pdf",
+     "bytes": 9853591,
+     "sha256": "99bf83472a2ccc87df3764fd87459a612e9dfa8620969107f758933ea6dc9af3",
+     "url": "https://ntrs.nasa.gov/api/citations/20205009660/downloads/Mike%20Barker_%20Paper_%20Improved%20Lola.pdf"
+    },
+    {
+     "path": "data/raw/docs/Glaser2018_illumination_lunar_poles.pdf",
+     "bytes": 4472843,
+     "sha256": "e6db2fcfcabf09f0541e0f2e7ff8ec1217b2e8edee0d2797016b6dd89ed1a2f7",
+     "url": "https://ntrs.nasa.gov/api/citations/20170007365/downloads/20170007365.pdf"
+    }
+   ]
+  },
+  {
+   "id": "jpl_horizons_tables",
+   "title": "JPL Horizons topocentric Sun (10) and Earth (399) az/el tables fetched in Phase 1 research",
+   "source": "JPL Horizons API (https://ssd.jpl.nasa.gov/api/horizons.api), airless apparent az/el, site coordinates on the Moon",
+   "product_page": "https://ssd.jpl.nasa.gov/horizons/",
+   "frame": "File headers: center pole/equ MEAN_ME (high precision); site on a 1737.4 km sphere; ephemeris DE441; atmospheric refraction NO (airless); solar radius 695,700 km (IAU 2015)",
+   "projection": "n/a",
+   "resolution": "60 min (2027) and 2 h (multi-year) steps",
+   "version": "Generated 2026-09-29 (file dates)",
+   "usage": "Online cross-check reference for the SPICE geometry (validation only)",
+   "files": [
+    {
+     "path": "data/raw/horizons/cr1_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "9817d1cb0e19c5af247b7c66f820aa3474f325adfca6d7d7e2cff2e7c8c95a61",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/cr1_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "4beea8682762254924686b5c1f66d30bbbb7680d8afa9daa1d354a0b9d920fda",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/g18_C2_2_m_10_2017-01-01_2036-12-31_2h.txt",
+     "bytes": 4477829,
+     "sha256": "6014e159fefff984b3937bc6149a93ac12a0ebc9a311ec851713fff78eff79f5",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/g18_C2_surface_10_2017-01-01_2036-12-31_2h.txt",
+     "bytes": 4477829,
+     "sha256": "36420233fda53cf8af36ad2c393f49462c867d666c2a531eb204f23c48ab4154",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/g18_CR1_2_m_10_2017-01-01_2036-12-31_2h.txt",
+     "bytes": 4477829,
+     "sha256": "dc9a1a70bc44f02e87a2205fe6d5fa28c930ae3ff16179fefaba2303d49f5f1d",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/g18_CR1_surface_10_2017-01-01_2036-12-31_2h.txt",
+     "bytes": 4477829,
+     "sha256": "0ed084dde1177b093156caa931baca83460fd106416d9488721eb67490071a73",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/g18_Shackleton_2_m_a_10_2017-01-01_2036-12-31_2h.txt",
+     "bytes": 4477829,
+     "sha256": "ca494c41a8c155ca6a79270f0c1e369be347610d938ed2a43bf800edd5b98cd7",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/g18_Shackleton_2_m_b_10_2017-01-01_2036-12-31_2h.txt",
+     "bytes": 4477829,
+     "sha256": "33904cf80d4954b3bd1776ffbacd606c41fd9934316aebdf24a04f09f0de4bfe",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/g18_Shackleton_S_surface_10_2017-01-01_2036-12-31_2h.txt",
+     "bytes": 4477829,
+     "sha256": "b27673b8402c56ab3b98b62355298d937eaee72acc8e4659153a6a4a559e9b32",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/im1_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "b725e526846c0631c5e1ff836469b5dc5c67e257c875c89ec9c013b4250899f3",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/im1_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "037436d76809e0443bbb690f17ee3c5c9549c38ead4fbf390f14e290d546c101",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/im1_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "9fece4b5f7b6f496075c2a2a136665a1208ad7fd52d98545c5dc747acc1dcb25",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/im1_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "dd51426d769280bf936c7e9cef83926cce7b61ad5654f2bc52f1d5c25eb62974",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/malapert_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "c0dcebf50dc73286ee05bed4290f525cafe42dba541e3442cfcad6aa15905a46",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/malapert_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "2fd2b30e706603b00e248a53b79cffa12fa6b04f9d282e6db38fd224af36985e",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/malapert_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "297d62fbe8dca6cfe950aaa6078c16a7990f40e5e56ea9e90571771a3e05509e",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/malapert_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "c91bbcc1414d51623e63be9baaab874aa1e084587a45e842e2012e34caa90e09",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/mouton_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "bd86cf28c3d8c9c2d0ff4c84311c4ef2c58ba0c112ac11adb73f003a67dbbd37",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/mouton_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "0b12c884c2cb12c815936df9df7e8b93e16d1115430faf5d51173eeb93cffac9",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/mouton_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "66460566d65b11c482ec4c858aabfe1a0d8f096c171e4671fa169463fd79d20c",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/mouton_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "8dd74ba4bd34424ed16499734bde64eb393aa61240be24673b8529085425c03c",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r01_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "adfd1fde3ff435d9187159913f20b63a16ea93e4cb2eef562e8b5150f62c8306",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r01_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "417ab4f29fa6ac2566723940313b00271c88a94f90ad7f8cf65b4048ddb47715",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r01_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "9116785485783db5bf0a9c7ad2de6ee3c3b2ec8c314fd45352405d73cd2dab68",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r01_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "c4e1cd63a3feb44bcd46607fe45e4a364e9a390b74946c7f2715360b9de35057",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r02_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "9a5271541b190e9503e276d429718d7562ff6c46428ac38ac456e40e13e70702",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r02_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "0d80f243d64a914ae05bbd896067e3650c0df311d466c83a8d58d9fe658b26ee",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r02_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "eabfd9be32d92fb98a67b2c9ceafac778056a788d92ec2e95bcd566ab28423e4",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r02_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "42c3a5e880c091cfa05deb2a30ae027d2bb29fe6fadee755314b148c36d16d28",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r03_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "4d0e1ea9cdb84fd29beedc0044ee0b99ca701d78838224f9a85dffb23b510cfe",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r03_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "fa0322ec76a2d7f81a3bd036b4d12acfa5d8de3febe80decabc98e00f6f1adc5",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r03_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "2e743ec405e61b96173853176e6cb04e96d49738e2a87d3cd1fb97ea89f08b06",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r03_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "0b046bfca849f412e1e727a30b39d83968e60653eda8d07363ba433fdac5cc32",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r04_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "75a61de23e00463c5e2371adae2b3d38a5b3ad0377f77c912cff70f56676de39",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r04_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "f8ebd1f6a2429263395c18957d190d3e7868d3a6076f351a6b417a48f24a1d28",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r04_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "a834c17850b22401e53bb9d2eae0f9c3fd7f2e418f0345e58ebdbeda5a2adb3d",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r04_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "01074ae7f80a4ea81bb42c567419871fc0557dace63e91aa68d014edc2410a9c",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r05_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "f08aaa0d93f6465c40845188b8ced9ee6a5126f246f2d1d8a674023ced30127d",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r05_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "1e3fe90c075bff53b74c2eb8683a423a83eab85ceb915fd94042778c8143fafa",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r05_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "573a8fb9e4ec269ddb4029f9f555f2aad9a443a83a1c077278160899eed9e230",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r05_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "457d92d7593ee0f501552d2c4e75013e7773241eaf6d93a02252e97890316788",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r06_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "9fa65b625e8814ce38b22f0db189c52b9cee99e4cf724fc31148bebf4b301dd9",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r06_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "3a9d626554bea02aca187beff9108636aa9913e7ef6981d79547e2d73f68cd70",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r06_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "f27294ecc741fba8ae1d73a1efc1f28889763602a627af1d839dac28df0eac49",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r06_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "e801cd68196da51c815a76d6e38a69cf4241c60843124814c376e212c659dec2",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r07_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "bb058b83a2b80fe80d816788040e588654cd6a48857441cc13db62082a5a705d",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r07_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "04557e013a5f0e94fc54d7f7fca9ccb086052b14cf53b2f69e28d8b2f564ab38",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r07_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "9295d2004bc3e9355740bdcf24cafca07d1082ea763db410f08ce903fdfd7639",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r07_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "a7f8702ccc81e4e6d47571d1e1e32fa3912f002ff5d130a323c7a5712528acee",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r08_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "66eec2d74e66978ccd8d31ca7cc9bfb73ec3d964d12c5116d0019a023c56c8c6",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r08_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "0345fa62f9f82dcb5037eafe8d7cd66f150e8c476646fccc278140e015fa7e9d",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r08_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "2541ee053ce2183ef03d3cfb32a94a7596a9c63142e28b502a605efc94cf0521",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r08_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "a7ec140e6bb1a7731e107d8a734738bd1b83ca4f19b4ab836ddd11b9dccec87a",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r09_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "92489babacca96b489e9cbc221cd8b7f5ca379a9f1a2546a639763089e358e70",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r09_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "d62c8b4f0051467539a6f020a0ae6e81ec170291e84e5ad9f2dcf39b61de9e0f",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r09_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "b53b075cd110495bffb2c846847d43fea0042e382462961f406775151c93ca7d",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r09_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "1b150379c1671f44829f6e586c5e3a5da885c17cab843bda721d62ed80b09d96",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r10_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "8485e8b3522ff9ab3f6ec4b27ce35c9a2e8d5ce4b547fe5b672111efdf962032",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r10_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "7c26370ac5fd7ad92da808c5aab5841022576dc5a0f9b7785f500bd58c8fc45f",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r10_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "f9b3e84c063caa1d6e86c3b6a17ad1a09b550666095059e4a4dc0884cf78bfab",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r10_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "f207b72c82e5aa4c653eccf76f2262008d9dd1e96b3fd0fb59f2fcd33db3457f",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r11_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "50f032e9426f6a2f9a7c48c7d11dc1833263ba718b32ad1b3971cff9fc830b2f",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r11_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "c5e238371cf79090d122fc68903c231dcd8080997f10249f0a2e1ebb71f208d3",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r11_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "5dc4fdeaa17174c8c3a80286eab7df485c1e409c68e6bee4bd7fbe0293126fe7",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r11_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "a3e12ecb4d8a009de73ab8c42bead28ef0b7630598c9dcb692796652262aedc0",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r12_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "b9a000da1ee7e4cbeb5b9460b086dff66a9f258ed0c93159c0f5deae5f30b2eb",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r12_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "4cb4f8d5bd0417af73f1b721b3a04dfbb36b8bf4e49079751ff89300a16bbdcc",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r12_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "ab9cabea2f1bd9a1dc9dcb376b83213e068d1363f13f532511fff11b4323e2c2",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/r12_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "e57918c204fab54b4d6939ea192e3c7ee3974d85b344c0164adc8911043c33cd",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/ridge_10_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161425,
+     "sha256": "2d9e2a28551090de01f8d0d8578a60752db5c544cf5950454ff87657cadbacf8",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/ridge_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "711c1c56512a21ca965d1fac038ac70cf488949e16936e8434a974f793a4154e",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/ridge_399_2008-01-01_2026-08-01_2h.txt",
+     "bytes": 4161980,
+     "sha256": "1ce4a7f1cbddbdfdf16b796502509432f0143cb6874ab406254a47ac36e638c7",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/ridge_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "a7dbbf0ef5db23673d9f7db2beb27500eeec8e8f85489b860a382f1346152dfc",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/shk_10_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 454540,
+     "sha256": "6a1fc5685ce559d5488bc5f6aaf8beecb0169bce6290dbec6e674ac405ac0ae4",
+     "url": ""
+    },
+    {
+     "path": "data/raw/horizons/shk_399_2027-01-01_2028-01-01_60m.txt",
+     "bytes": 455095,
+     "sha256": "88b59076dc54e6907e505dff79c859bb31607fec5a55cb67f79709fffd9b75a8",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "id": "bsc5",
+   "title": "Yale Bright Star Catalogue, 5th revised edition (9,110 stars to V = 6.5)",
+   "source": "Hoffleit & Warren (1991), via CDS VizieR catalogue V/50 (columns HR, RA/Dec J2000 deg, Vmag, B-V, Name)",
+   "product_page": "https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=V/50",
+   "frame": "ICRS/J2000 equatorial; rotated to MOON_ME with SPICE pxform at display time",
+   "resolution": "star positions to 1e-6 deg",
+   "version": "fetched 2026-10-01",
+   "usage": "Star field in the 3-D globe, terrain view and sky dome",
+   "files": [
+    {
+     "path": "data/raw/stars/bsc5_vizier.tsv",
+     "bytes": 398025,
+     "sha256": "8c6471bd6a85427e6218ec71af4559cf0e4eb394bf5eeb4eae698d85f4d2db9a",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "id": "pgda78_site01_04",
+   "title": "NASA PGDA Product 78: 5 m south-pole terrain, Site01 and Site04 (surface, slope, error)",
+   "source": "NASA Goddard Planetary Geodesy Data Archive, Product 78 (Barker et al. 2021)",
+   "product_page": "https://pgda.gsfc.nasa.gov/products/78",
+   "frame": "MOON_ME (DE421), polar stereographic (south), pixel-registered",
+   "resolution": "5 m/pixel",
+   "version": "final_adj (from the file names)",
+   "usage": "Near-site terrain for horizons, slopes and the 3-D view",
+   "files": [
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_surf.tif",
+     "bytes": 40980810,
+     "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+     "url": ""
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_slp.tif",
+     "bytes": 40980776,
+     "sha256": "3a90035a4946b4a04b7332c52f0b2b1cff71648bd8c105e14d8a7e15c6bcfe8e",
+     "url": ""
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_toterr.tif",
+     "bytes": 40980810,
+     "sha256": "cf2cf52f52d2aa51e60d058010d10b0ebfb1d3e920f5a2b9a46eb6c51054ab1c",
+     "url": ""
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_surf.tif",
+     "bytes": 40980806,
+     "sha256": "38ff70dbdf2f066c2cfa94a646c3a59d653ce7f6b4528b15fc1b43ee397ce758",
+     "url": ""
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_slp.tif",
+     "bytes": 40980772,
+     "sha256": "ec3cfa184b114d95aff498e7452764a8569737ae829e7ff3efd38d5187182579",
+     "url": ""
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_toterr.tif",
+     "bytes": 40980808,
+     "sha256": "416c4baa3b64def0182bb3379a1a9228482efd8ce32a39309ea8de5d0330fbe6",
+     "url": ""
+    }
+   ]
+  }
+ ],
+ "unlisted_files": []
+}

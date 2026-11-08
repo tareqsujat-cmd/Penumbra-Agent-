@@ -1,0 +1,17 @@
+node_modules/
+dist/
+tiles/
+data/raw/
+data/cache/
+__pycache__/
+.pytest_cache/
+
+# local logs and run artefacts
+*.log
+data/vitest.json
+screenshots/
+.env
+.env.local
+.venv/
+*.tsbuildinfo
+.vite/

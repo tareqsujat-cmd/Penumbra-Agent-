@@ -1,0 +1,32 @@
+{
+ "machine": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD, 16 logical CPUs, Windows 11",
+ "one_horizon_ms": 5.8,
+ "horizons_256_points_ms": 1004.6,
+ "site_grids_s": {
+  "cr1": 97.8,
+  "shk": 94.1,
+  "mal": 15.1,
+  "mou": 13.5,
+  "nob": 16.1
+ },
+ "site_grid_points": {
+  "cr1": 19881,
+  "shk": 19881,
+  "mal": 3249,
+  "mou": 3249,
+  "nob": 3249
+ },
+ "annual_metrics_cr1_grid_ms": 835.5,
+ "window_metrics_30d_cr1_grid_ms": 70.1,
+ "robust_aim_cr1_ms": 16.5,
+ "landing_risk_ms": 1.9,
+ "http_ms": {
+  "GET /api/sites/cr1 (cached bundle)": 48.8,
+  "POST /api/landing-risk": 5.9,
+  "POST /api/robust-aim": 50.7,
+  "POST /api/visibility (new date, 30 d)": 9.2,
+  "POST /api/compare (3 sites, new date)": 216.1
+ },
+ "app_ready_ms": 315,
+ "first_terrain_paint_ms_after_ready": 46
+}
