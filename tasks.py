@@ -1,7 +1,10 @@
 """Penumbra task runner (Instructions §56-57). Run with the backend's Python environment:
 
     python tasks.py doctor        check Python, Node, packages, datasets, SPICE kernels, caches, ports
-    python tasks.py link          hard-link the raw NASA/JPL files into data/raw and write datasets.json
+    python tasks.py data          download and verify the raw NASA/JPL files into data/raw (see DATA_DOWNLOAD_MANUAL.md);
+                                  options are passed on, e.g. --list, --check, --skip docs
+    python tasks.py imagery       build the globe imagery tiles in tiles/ (downloads from USGS and NASA Moon Trek)
+    python tasks.py link          maintainers: hard-link the raw files from the original download folders instead
     python tasks.py precompute    build the cached horizon grids, geometry and metric fields (about 5 minutes)
     python tasks.py build         type-check and build the frontend into dist/
     python tasks.py dev           build if needed, then serve app + API + tiles on http://127.0.0.1:4173
@@ -59,13 +62,14 @@ def doctor() -> int:
     print("Data")
     files = ROOT / "data/metadata/files.json"
     if ok(files.exists(), "data/metadata/files.json", "python tasks.py link"):
-        fl = json.loads(files.read_text(encoding="utf-8"))["files"]
+        # Reference papers (data/raw/docs/*.pdf) are optional: they are not used by the app and are not in the repository.
+        fl = [f for f in json.loads(files.read_text(encoding="utf-8"))["files"] if not f["path"].endswith(".pdf")]
         missing = [f["path"] for f in fl if not (ROOT / f["path"]).exists()]
-        good &= ok(not missing, f"{len(fl) - len(missing)}/{len(fl)} raw files present", f"missing e.g. {missing[:3]}")
+        good &= ok(not missing, f"{len(fl) - len(missing)}/{len(fl)} raw files present", f"missing e.g. {missing[:3]}; run: python tasks.py data")
     sys.path.insert(0, str(ROOT))
     from backend.app.science import ephemeris as eph  # noqa: E402
     for k in eph.KERNELS:
-        good &= ok((ROOT / "data/raw/spice" / k).exists(), f"SPICE kernel {k}", "python tasks.py link")
+        good &= ok((ROOT / "data/raw/spice" / k).exists(), f"SPICE kernel {k}", "python tasks.py data --only spice")
     print("Cached products")
     hz = sorted((ROOT / "data/cache/horizons").glob("*.npz")) if (ROOT / "data/cache/horizons").exists() else []
     from backend.app.services.sites import SITES  # noqa: E402
@@ -80,6 +84,24 @@ def doctor() -> int:
 
 
 # ---------------------------------------------------------------------------------------------- build / dev
+IMAGERY_STEPS = [  # order matters: each step adds to tiles/manifest.json
+    ["scripts/prepare_tiles.py", "all"],     # global LOLA heights (ldem16.bin), WAC levels 0-6, manifest
+    ["scripts/prepare_polar.py", "north"],   # polar coarse height grids (camera floor)
+    ["scripts/prepare_polar.py", "sites"],   # site and region boxes in the manifest
+    ["scripts/prepare_trek.py", "all"],      # Moon Trek grid: polar height tiles and photo + relief composites
+    ["scripts/prepare_site_images.py"],      # site, detail and region images for the landing views
+]
+
+
+def imagery() -> int:
+    for step in IMAGERY_STEPS:
+        print(flush=True)
+        if rc := run([PY, *step]):
+            print(f"Step failed (exit {rc}). Fix the cause and run 'python tasks.py imagery' again; finished tiles are kept.")
+            return rc
+    return 0
+
+
 def build() -> int:
     return run([NPX, "tsc", "--noEmit", "-p", "."]) or run([NPX, "vite", "build"])
 
@@ -143,6 +165,10 @@ def main() -> int:
     cmd = args[0] if args else "help"
     if cmd == "doctor":
         return doctor()
+    if cmd == "data":
+        return run([PY, "scripts/download_data.py", *args[1:]])
+    if cmd == "imagery":
+        return imagery()
     if cmd == "link":
         return run([PY, "scripts/link_data.py"]) or run([PY, "scripts/build_datasets.py"])
     if cmd == "precompute":

@@ -1,0 +1,1219 @@
+{
+ "note": "Raw public data for Penumbra, downloaded by scripts/download_data.py into data/raw/. Written by scripts/build_download_manifest.py; see DATA_DOWNLOAD_MANUAL.md.",
+ "groups": [
+  {
+   "id": "spice",
+   "title": "NAIF SPICE kernels: DE440, lunar orientation, Earth orientation, DSN stations",
+   "source": "NASA JPL NAIF",
+   "files": [
+    {
+     "path": "data/raw/spice/de440s.bsp",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp",
+     "bytes": 32726016,
+     "check": "sha256",
+     "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    {
+     "path": "data/raw/spice/earth_2026_260806_2126_predict.bpc",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_2026_260806_2126_predict.bpc",
+     "bytes": 19169280,
+     "check": "sha256",
+     "sha256": "9f565ab5aaccd33afe54f3a1b20cb8b136636c31a0bd4c0986fac722b931c280"
+    },
+    {
+     "path": "data/raw/spice/earth_assoc_itrf93.tf",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/planets/earth_assoc_itrf93.tf",
+     "bytes": 7522,
+     "check": "sha256",
+     "sha256": "aab7bbc19b8a69bad11988ee1b4812a3963812a03a029c2776863e680719b336"
+    },
+    {
+     "path": "data/raw/spice/earth_latest_high_prec.bpc",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc",
+     "bytes": 5138432,
+     "check": "sha256",
+     "sha256": "9fee39503b9fdb3eed05a7092f84ff5a53379bab09214fd7a562a8124239a017"
+    },
+    {
+     "path": "data/raw/spice/earth_topo_260814.tf",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/stations/earth_topo_260814.tf",
+     "bytes": 69400,
+     "check": "sha256",
+     "sha256": "4f40cd1e86718047bc8ea6ff6bd063c9fbf36102b63f0dca370c8e94fd282490"
+    },
+    {
+     "path": "data/raw/spice/earthstns_itrf93_260814.bsp",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/stations/earthstns_itrf93_260814.bsp",
+     "bytes": 26624,
+     "check": "sha256",
+     "sha256": "007eb0aad5dd022c6d61bdbfb2395680bd1eb31c49a8637d0b0a1cfbea737c6b"
+    },
+    {
+     "path": "data/raw/spice/gm_de440.tpc",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/gm_de440.tpc",
+     "bytes": 12406,
+     "check": "sha256",
+     "sha256": "924ddf4fb9ead9fe8a1aa55780bcabde40b09d00065d58226e24b68d8092f140"
+    },
+    {
+     "path": "data/raw/spice/moon_080317.tf",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_080317.tf",
+     "bytes": 21437,
+     "check": "sha256",
+     "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993"
+    },
+    {
+     "path": "data/raw/spice/moon_assoc_me.tf",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_assoc_me.tf",
+     "bytes": 8468,
+     "check": "sha256",
+     "sha256": "52c622043ce0447d575e59ee01642f1894921e68c10f934ceff065f362da6c1c"
+    },
+    {
+     "path": "data/raw/spice/moon_de440_250416.tf",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_de440_250416.tf",
+     "bytes": 19478,
+     "check": "sha256",
+     "sha256": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768"
+    },
+    {
+     "path": "data/raw/spice/moon_pa_de421_1900-2050.bpc",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de421_1900-2050.bpc",
+     "bytes": 1770496,
+     "check": "sha256",
+     "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf"
+    },
+    {
+     "path": "data/raw/spice/moon_pa_de440_200625.bpc",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de440_200625.bpc",
+     "bytes": 12863488,
+     "check": "sha256",
+     "sha256": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f"
+    },
+    {
+     "path": "data/raw/spice/naif0012.tls",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls",
+     "bytes": 5257,
+     "check": "sha256",
+     "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b"
+    },
+    {
+     "path": "data/raw/spice/pck00011.tpc",
+     "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc",
+     "bytes": 131226,
+     "check": "sha256",
+     "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+    }
+   ]
+  },
+  {
+   "id": "lola",
+   "title": "LRO LOLA south-polar DEMs LDEM_80S_80M and LDEM_75S_240M",
+   "source": "NASA PDS Geosciences Node",
+   "files": [
+    {
+     "path": "data/raw/lola/ldem_75s_240m.img",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_75s_240m.img",
+     "bytes": 29062688,
+     "check": "sha256",
+     "sha256": "d031efe2611b17dfbf3c158f5e15dc04cd5719349dcbf6384bb21fd97697c490"
+    },
+    {
+     "path": "data/raw/lola/ldem_75s_240m.lbl",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_75s_240m.lbl",
+     "bytes": 4990,
+     "check": "sha256",
+     "sha256": "ec07239f41d8abc1a3681495b5799b770c7206b5268b76721d69180df0422e02"
+    },
+    {
+     "path": "data/raw/lola/ldem_80s_80m.img",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_80s_80m.img",
+     "bytes": 115520000,
+     "check": "sha256",
+     "sha256": "e6591eeea35402ca5e124ca00f5bf0774381a2d4fa919144b455d82b8ff65fdc"
+    },
+    {
+     "path": "data/raw/lola/ldem_80s_80m.lbl",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_80s_80m.lbl",
+     "bytes": 4986,
+     "check": "sha256",
+     "sha256": "107c7558cbf8832e4119d3c8c2b1b272623344275c85378a9b0e03c22876eb33"
+    }
+   ]
+  },
+  {
+   "id": "pgda78",
+   "title": "PGDA Product 78: 5 m south-pole site DEMs, slopes, errors and 20 error clones",
+   "source": "NASA GSFC PGDA",
+   "files": [
+    {
+     "path": "data/raw/docs/PGDA78_README.txt",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/README",
+     "bytes": 1829,
+     "check": "sha256",
+     "sha256": "e985a2337c9de1cd665b0ddad8b7f1fac88d65c96d1e47d1b975a91c8e53e7bd"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0001_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0001_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "242de9e3da624a276864cc4fa7c499e96981c95fd27583565e68e92434faf05b"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0002_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0002_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "97b2c05633e308c72eddfc5a337089836d80b5edb7469321976973f7eeb7dcad"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0003_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0003_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "2e79f90fcc6b28b06cc5524ac80601ace4ed2ea3b875e18deede92903b64f06c"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0004_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0004_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "447667f3ab461e246196698c882fe154ecc4388621bf07f7b04b93150f68aaa0"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0005_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0005_err.tif",
+     "bytes": 40987163,
+     "check": "sha256",
+     "sha256": "252306940146d35a362978aab45f81d2351ef5d097c791a291b68a970d9af51b"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0006_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0006_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "5eb7ec40a17a6639826aec7b44e4713f77b9a547a90fa0450389cafcc67c3ec0"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0007_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0007_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "d484e8cb8ee6e0489bd625ac6c17f540310fcd664b78993557411d3fc1f90046"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0008_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0008_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "ef3c8c17151b4edef013aa51f404f682ce88deec4e9c5df5ffa5ef7d831e8543"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0009_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0009_err.tif",
+     "bytes": 40987153,
+     "check": "sha256",
+     "sha256": "18e5edd9fee02bfe1995fea80546dcf90e91986c2ed6d05d4d17519c0a9c2309"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0010_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0010_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "1b7f56fa87d6b98a520eeaf869d5b9a0a4df7092fa8b91e4f294c75ddecfb816"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0011_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0011_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "a3ef788e076b604ff46ce9484fb854bacee9cd5ed36b486d850a5828f0a04843"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0012_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0012_err.tif",
+     "bytes": 40987163,
+     "check": "sha256",
+     "sha256": "da0fc5c26820b91c7c5b05e43a432364cb60771fd611a71c22c0f803b63239e7"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0013_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0013_err.tif",
+     "bytes": 40987159,
+     "check": "sha256",
+     "sha256": "1164bc9ae9f22dc152d1f24dd88f8fd06a2d028c3d2aeae6eb80e8367fbb9544"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0014_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0014_err.tif",
+     "bytes": 40987159,
+     "check": "sha256",
+     "sha256": "8dcbca4caf7ae240b1e99528e677b0aa75b62a446dfe92150d0117b0f39d05f2"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0015_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0015_err.tif",
+     "bytes": 40987157,
+     "check": "sha256",
+     "sha256": "c3973b5a6345aa84b94f9f8b49b4d727bd0972703e4d99de3d0c70c492913ad4"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0016_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0016_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "eb4b540491536af43051942f6f44d52db4b603a19bdaeecc0de609645e86e943"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0017_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0017_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "1c55d36933f156f6c305e1621fbf6471ba7a00e6bdd66eb2f91f3b43c0328b32"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0018_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0018_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "b2fead63eace85f1dfa90d7da65d0fb084e321850126697cd824cd6263406b45"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0019_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0019_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "47d201a05a8e9992452fb48ef3418c56aa4c6745f271d398e2310c3ec4bd5fff"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Clones/Site01_final_adj_5mpp_0020_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Clones/Site01_final_adj_5mpp_0020_err.tif",
+     "bytes": 40987165,
+     "check": "sha256",
+     "sha256": "a93a9d516548b71d88ca0a218f1c9ecd2e7fb00843eff24628c46ea4d89237b9"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_slp.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_slp.tif",
+     "bytes": 40980776,
+     "check": "sha256",
+     "sha256": "3a90035a4946b4a04b7332c52f0b2b1cff71648bd8c105e14d8a7e15c6bcfe8e"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_slperr.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_slperr.tif",
+     "bytes": 40980810,
+     "check": "sha256",
+     "sha256": "52bc3b239f61605e6bb98bab6d6b17acd22389c59e57336862157f2fbd643a33"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_surf.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_surf.tif",
+     "bytes": 40980810,
+     "check": "sha256",
+     "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e"
+    },
+    {
+     "path": "data/raw/pgda78/Site01/Site01_final_adj_5mpp_toterr.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site01/Site01_final_adj_5mpp_toterr.tif",
+     "bytes": 40980810,
+     "check": "sha256",
+     "sha256": "cf2cf52f52d2aa51e60d058010d10b0ebfb1d3e920f5a2b9a46eb6c51054ab1c"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0001_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0001_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "8d6efbddbfde8aa98a4a2454b6f79636ce307138360f3b38b6243cb76a585963"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0002_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0002_err.tif",
+     "bytes": 40987159,
+     "check": "sha256",
+     "sha256": "a3b58f9000a75c7ed0156ee8222a8bcd66112748fbe8d89fc2de7e248d41bf0f"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0003_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0003_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "07dad75a48f1f4acf9f9084408bcf0bb3a80a0a5368613da425ad462baad8c89"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0004_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0004_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "afbf332aa43af39c60791a3d80bd7ba77f46eb3785af02555b402da2145c99df"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0005_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0005_err.tif",
+     "bytes": 40987159,
+     "check": "sha256",
+     "sha256": "425abb287b1348700dca1ced607d4027a17e832b9efdd576e36e64b1d58ca2b3"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0006_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0006_err.tif",
+     "bytes": 40987153,
+     "check": "sha256",
+     "sha256": "1ac036b5d0d089f94b0fe884fac42b86f1b0fec1f0c555e893d05dc715f22a52"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0007_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0007_err.tif",
+     "bytes": 40987157,
+     "check": "sha256",
+     "sha256": "61319ed8b5af3c861d02ef0710216eca9806c4c44cb630266ab1a4761c1e41cf"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0008_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0008_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "afcf8359689006776e5cfaae87ebc9a013600927f144f706d9e3a9d6c83c4c2a"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0009_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0009_err.tif",
+     "bytes": 40987157,
+     "check": "sha256",
+     "sha256": "f3bf0719df2c656fe7bbd0f2abf0e2fcaf9d4ef6514c30b0e98a24f36a5a74e2"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0010_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0010_err.tif",
+     "bytes": 40987153,
+     "check": "sha256",
+     "sha256": "3e522f9679850de3efe3154e3f65c5c624ff32e0e08b215e42aa1ebcd89ddb80"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0011_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0011_err.tif",
+     "bytes": 40987159,
+     "check": "sha256",
+     "sha256": "997d62055e7d36fdbaeddc994b07d575f1e787372541ac6f85eebf331cb4fd7f"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0012_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0012_err.tif",
+     "bytes": 40987157,
+     "check": "sha256",
+     "sha256": "0f946b7939ddae8f68387000f5c5abb80a4f43c239f9c03da60cc40271752efd"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0013_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0013_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "bb4629840f10d37afe25f51b044199c6094ed1581c8acf02826c6bab92c3afd4"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0014_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0014_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "49161ccf69f48ef0aedb7928251153f2b5d37d92fbd4dd9f0081d7c453e9452d"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0015_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0015_err.tif",
+     "bytes": 40987157,
+     "check": "sha256",
+     "sha256": "7f0dcfce01e02680a541ead656158fc162b784ae6119f78ce72e29111278c72d"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0016_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0016_err.tif",
+     "bytes": 40987153,
+     "check": "sha256",
+     "sha256": "d3ffb8ba3163b73d967f38a452d685058eb4905316cb606f8b823f3eff83ede4"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0017_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0017_err.tif",
+     "bytes": 40987157,
+     "check": "sha256",
+     "sha256": "ebe4f04d78a5304350aa74418e9e1ed27de78e1968e21c86972b74d57d03184f"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0018_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0018_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "53b9a7ddd81f7e1eb1ff85e90340a6b90fa4d5c81967f8aed8afde8370f1bb88"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0019_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0019_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "dbe66df5699c21a72bdf4b556db541dea03eae878ee6d9c19bcfcbe0c7a0e9d4"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Clones/Site04_final_adj_5mpp_0020_err.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Clones/Site04_final_adj_5mpp_0020_err.tif",
+     "bytes": 40987161,
+     "check": "sha256",
+     "sha256": "99aca2e8044a7f01456391392f0299ffc3c95fa7d31b42faa04e542e811b3333"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_slp.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_slp.tif",
+     "bytes": 40980772,
+     "check": "sha256",
+     "sha256": "ec3cfa184b114d95aff498e7452764a8569737ae829e7ff3efd38d5187182579"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_slperr.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_slperr.tif",
+     "bytes": 40980806,
+     "check": "sha256",
+     "sha256": "067cd4d8e3e8c14a9a5be1915242532f85063f1b300f248407cc8c8b68e90695"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_surf.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_surf.tif",
+     "bytes": 40980806,
+     "check": "sha256",
+     "sha256": "38ff70dbdf2f066c2cfa94a646c3a59d653ce7f6b4528b15fc1b43ee397ce758"
+    },
+    {
+     "path": "data/raw/pgda78/Site04/Site04_final_adj_5mpp_toterr.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site04/Site04_final_adj_5mpp_toterr.tif",
+     "bytes": 40980808,
+     "check": "sha256",
+     "sha256": "416c4baa3b64def0182bb3379a1a9228482efd8ce32a39309ea8de5d0330fbe6"
+    },
+    {
+     "path": "data/raw/pgda78/Site06/Site06_final_adj_5mpp_slp.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site06/Site06_final_adj_5mpp_slp.tif",
+     "bytes": 64025573,
+     "check": "sha256",
+     "sha256": "47db26dc18aa8f253a7d281ccf86189bb8dfd2b33b8a5b7c20586e4877c24e0c"
+    },
+    {
+     "path": "data/raw/pgda78/Site06/Site06_final_adj_5mpp_surf.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site06/Site06_final_adj_5mpp_surf.tif",
+     "bytes": 64025603,
+     "check": "sha256",
+     "sha256": "cca17e8067601dd659b583f889204db6bce685bc30c60a9e62427a8bce36b03d"
+    },
+    {
+     "path": "data/raw/pgda78/Site06/Site06_final_adj_5mpp_toterr.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site06/Site06_final_adj_5mpp_toterr.tif",
+     "bytes": 64025607,
+     "check": "sha256",
+     "sha256": "997c7d2d7ae6a74a1d5c38411cf30a414b1a83474b6b3c3a7b1cb32ef675661e"
+    },
+    {
+     "path": "data/raw/pgda78/Site20/Site20_final_adj_5mpp_slp.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site20/Site20_final_adj_5mpp_slp.tif",
+     "bytes": 40980772,
+     "check": "sha256",
+     "sha256": "1e3c09698e731c6ed5ed153a0a39bed79536cebf45d699d198e8fd647d1d561e"
+    },
+    {
+     "path": "data/raw/pgda78/Site20/Site20_final_adj_5mpp_surf.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site20/Site20_final_adj_5mpp_surf.tif",
+     "bytes": 40980802,
+     "check": "sha256",
+     "sha256": "e51451f3629ba7cd5cfc1b32c8c0ee3c5c454607488b00ea00cd06a9e301a892"
+    },
+    {
+     "path": "data/raw/pgda78/Site20/Site20_final_adj_5mpp_toterr.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site20/Site20_final_adj_5mpp_toterr.tif",
+     "bytes": 40980809,
+     "check": "sha256",
+     "sha256": "3600dcb6dde91cec86cb8d350a620391e828097a46026031d3638b4b3b46367a"
+    },
+    {
+     "path": "data/raw/pgda78/Site23/Site23_final_adj_5mpp_slp.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site23/Site23_final_adj_5mpp_slp.tif",
+     "bytes": 70586810,
+     "check": "sha256",
+     "sha256": "e2b41c65a9c9044d359f634e706b71fa187dbe7d9f271d5410cbd81d68eadb91"
+    },
+    {
+     "path": "data/raw/pgda78/Site23/Site23_final_adj_5mpp_surf.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site23/Site23_final_adj_5mpp_surf.tif",
+     "bytes": 70586804,
+     "check": "sha256",
+     "sha256": "12d280a59cd7580415f6bada638d0abe025ce6727541fddf68d5dc371a6c94cf"
+    },
+    {
+     "path": "data/raw/pgda78/Site23/Site23_final_adj_5mpp_toterr.tif",
+     "url": "https://pgda.gsfc.nasa.gov/data/LOLA_5mpp/Site23/Site23_final_adj_5mpp_toterr.tif",
+     "bytes": 70586811,
+     "check": "sha256",
+     "sha256": "fe08539cfa3a0f7bb4ddf15dd7e0835fae0c761d516b2157d51116311a1ff69d"
+    }
+   ]
+  },
+  {
+   "id": "pgda69",
+   "title": "PGDA Product 69: average Sun and Earth visibility maps (validation V1)",
+   "source": "NASA GSFC PGDA (imbrium.mit.edu)",
+   "files": [
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608.IMG",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608.IMG",
+     "bytes": 116250752,
+     "check": "sha256",
+     "sha256": "a354543b62871227a5066077f5ac61ed7e8dabd5268eb5a5aa4b147aa5bba61e"
+    },
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608.LBL",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608.LBL",
+     "bytes": 4092,
+     "check": "sha256",
+     "sha256": "1b597f85822c20e349469c9499e7bd85a48efc3a23b9dd9d82b658e59192883c"
+    },
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608_EARTH.IMG",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608_EARTH.IMG",
+     "bytes": 116250752,
+     "check": "sha256",
+     "sha256": "443ad251a480dea19e96417dfcfe1cb87a91eb02ee158b262d78abe899258fff"
+    },
+    {
+     "path": "data/raw/pgda69/AVGVISIB_75S_120M_201608_EARTH.LBL",
+     "url": "http://imbrium.mit.edu/EXTRAS/ILLUMINATION/IMG/AVGVISIB_75S_120M_201608_EARTH.LBL",
+     "bytes": 4112,
+     "check": "sha256",
+     "sha256": "86eabf4611eaf18c4e9b170b205d517b014ec9e694bc93c80d693caf7c0ca015"
+    }
+   ]
+  },
+  {
+   "id": "horizons",
+   "title": "JPL Horizons topocentric Sun and Earth az/el tables (validation V4 and research points)",
+   "source": "JPL Horizons API",
+   "files": [
+    {
+     "path": "data/raw/horizons/cr1_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.69%2C-89.45%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "8096cd3683b17453d88f9e23f18ed17003877fe14c408dab47164b6a0bd6289e"
+    },
+    {
+     "path": "data/raw/horizons/cr1_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.69%2C-89.45%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "8026af77203e2eb39f0a8509956c75f9cefa5c003df9a3b258cac403e6b762ef"
+    },
+    {
+     "path": "data/raw/horizons/g18_C2_2_m_10_2017-01-01_2036-12-31_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27245.98%2C-89.313%2C0%27&START_TIME=%272017-01-01%2000%3A00%27&STOP_TIME=%272036-12-31%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4477829,
+     "check": "rows",
+     "rows_sha256": "b3610b08a0bdb142903d1dbb5ca844a5bcf9de87c4e1e8352ccccce539f58123"
+    },
+    {
+     "path": "data/raw/horizons/g18_C2_surface_10_2017-01-01_2036-12-31_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27245.94%2C-89.3157%2C0%27&START_TIME=%272017-01-01%2000%3A00%27&STOP_TIME=%272036-12-31%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4477829,
+     "check": "rows",
+     "rows_sha256": "9851a293bb368e4914dfc1ccbcd701309e1d7d08eddb5e74545517428dcb276c"
+    },
+    {
+     "path": "data/raw/horizons/g18_CR1_2_m_10_2017-01-01_2036-12-31_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.83%2C-89.4398%2C0%27&START_TIME=%272017-01-01%2000%3A00%27&STOP_TIME=%272036-12-31%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4477829,
+     "check": "rows",
+     "rows_sha256": "c815ef91ce10dccb481566062741724c4ccfb447f435ff7e74aa38efaf9dcd0f"
+    },
+    {
+     "path": "data/raw/horizons/g18_CR1_surface_10_2017-01-01_2036-12-31_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.84%2C-89.4505%2C0%27&START_TIME=%272017-01-01%2000%3A00%27&STOP_TIME=%272036-12-31%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4477829,
+     "check": "rows",
+     "rows_sha256": "1140518787c56794bd25e2d8ab16b1349f5bce81196b6fa0e9abc73a76944ee3"
+    },
+    {
+     "path": "data/raw/horizons/g18_Shackleton_2_m_a_10_2017-01-01_2036-12-31_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27197.19%2C-89.6866%2C0%27&START_TIME=%272017-01-01%2000%3A00%27&STOP_TIME=%272036-12-31%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4477829,
+     "check": "rows",
+     "rows_sha256": "600a6cad518d582f969ded45b88c4d036daeacd25156d5e32019167709829fd9"
+    },
+    {
+     "path": "data/raw/horizons/g18_Shackleton_2_m_b_10_2017-01-01_2036-12-31_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27204.7%2C-89.7815%2C0%27&START_TIME=%272017-01-01%2000%3A00%27&STOP_TIME=%272036-12-31%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4477829,
+     "check": "rows",
+     "rows_sha256": "1f3fe7508df2cea8a9e6322cc5ae5729718db2ba1359c1433ad4a356d1b445c6"
+    },
+    {
+     "path": "data/raw/horizons/g18_Shackleton_S_surface_10_2017-01-01_2036-12-31_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27203.97%2C-89.7849%2C0%27&START_TIME=%272017-01-01%2000%3A00%27&STOP_TIME=%272036-12-31%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4477829,
+     "check": "rows",
+     "rows_sha256": "d8079d0a72aaf0454c9a59cb308c17085d3933551bbb0c3f7004236f7ba5588b"
+    },
+    {
+     "path": "data/raw/horizons/im1_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%271.44%2C-80.13%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "bafd812a1dedb57031113ee1b5c25840f4ba84c053d16988637dd26245e42f70"
+    },
+    {
+     "path": "data/raw/horizons/im1_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%271.44%2C-80.13%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "9ccfec0187b1515f09340d05735d8f69d289e271fa3234dd1cc4fc6994a5f0bd"
+    },
+    {
+     "path": "data/raw/horizons/im1_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%271.44%2C-80.13%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "f0f9e9182bee61b3db959461f667c37f244de6613dbab1416f977717602e9a68"
+    },
+    {
+     "path": "data/raw/horizons/im1_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%271.44%2C-80.13%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "b991c69ac205adad8eba021184d629733b184268e67a5aca3b9c3466d202dfe6"
+    },
+    {
+     "path": "data/raw/horizons/malapert_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%270.0%2C-86.0%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "f81f0088e277d02a1775b30c786bb2d6f05819fa1e2740dbf94b8676bcffc783"
+    },
+    {
+     "path": "data/raw/horizons/malapert_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%270.0%2C-86.0%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "7806243dc692ff2abfb36d4ef055e7321d943b1f15a2b6c3a3cf3b6cc32d21c2"
+    },
+    {
+     "path": "data/raw/horizons/malapert_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%270.0%2C-86.0%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "a94f408bb5263a7fe52654cb8b4bb2d45c3a6a9b6ccf4036d8f2e2a1e0cab67c"
+    },
+    {
+     "path": "data/raw/horizons/malapert_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%270.0%2C-86.0%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "8b659bcecde9abd94578d4991a0b303eb0881f007a09995fc6b5aa5e02cda3fb"
+    },
+    {
+     "path": "data/raw/horizons/mouton_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2729.2%2C-84.8%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "d0607c983c14c75aa58b32712a73fb2a188078b9949844c4a4080e6c7c7d307e"
+    },
+    {
+     "path": "data/raw/horizons/mouton_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2729.2%2C-84.8%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "af37b66a2f16f0e350e27ae3a0350a6529bd373fe251ba246aa81ee05118cb27"
+    },
+    {
+     "path": "data/raw/horizons/mouton_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2729.2%2C-84.8%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "f24869547c3a36b097e082a2f949e2f36847188ba8513d1f7d25dcd3c056b417"
+    },
+    {
+     "path": "data/raw/horizons/mouton_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2729.2%2C-84.8%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "836894d0adbe5bc006d49043b454bf95f0aae15bdce3ae204e8eb3e9b77065b0"
+    },
+    {
+     "path": "data/raw/horizons/r01_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27230.3687%2C-84.5596%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "a8ee31adf251a64ac375ae659cf9a2fcf7d153a7d61fb227747f00d617974495"
+    },
+    {
+     "path": "data/raw/horizons/r01_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27230.3687%2C-84.5596%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "c420350fdbb5ec546717275c05f4ed8ca831e526ad82654cb066c9a3f1bcd243"
+    },
+    {
+     "path": "data/raw/horizons/r01_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27230.3687%2C-84.5596%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "61cf857a2144b8a1a3ad4a18e399fcb8ccf02bd8fd82054d3bf828c4b6d94206"
+    },
+    {
+     "path": "data/raw/horizons/r01_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27230.3687%2C-84.5596%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "a4dcc21e89c173cf8124c7d44c99eeb959ae645750933493faffe9fadd5d2563"
+    },
+    {
+     "path": "data/raw/horizons/r02_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27133.3802%2C-85.6083%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "8415a87319f2542997ddacc5f5f17a5b56606384b597c3f5da57ef3a9d9f6a0f"
+    },
+    {
+     "path": "data/raw/horizons/r02_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27133.3802%2C-85.6083%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "7c4a4a016aef4cf0490d8e3ab65a9f918d72ea56f7e373d43eebd8dcd7fd5d50"
+    },
+    {
+     "path": "data/raw/horizons/r02_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27133.3802%2C-85.6083%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "961484daaab156014799da61db9aa9978256615ca78b993fe132d88d3c621266"
+    },
+    {
+     "path": "data/raw/horizons/r02_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27133.3802%2C-85.6083%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "1f945b0cbed6924c68cc26685229b3fdb6f2620f730dc8ccf2c2190152b3f9ae"
+    },
+    {
+     "path": "data/raw/horizons/r03_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27284.5866%2C-85.1726%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "604de04322b59cb3fd00009e98640a73978480325b36e35baa2222e17cd77aca"
+    },
+    {
+     "path": "data/raw/horizons/r03_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27284.5866%2C-85.1726%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "cb5ee6c1b53e4b9fb7741e5685d90802cb68a79e63ca96aa942f8cb4ba22586c"
+    },
+    {
+     "path": "data/raw/horizons/r03_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27284.5866%2C-85.1726%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "6ae3cbfbe74b3a8bed4b7596c28ce85672fe8272ae753182ac9e7097945a9f82"
+    },
+    {
+     "path": "data/raw/horizons/r03_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27284.5866%2C-85.1726%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "da57857f84fad715d8aee76838951d695286297f08abcc5f890e4bfd9aa3b7f3"
+    },
+    {
+     "path": "data/raw/horizons/r04_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27331.1461%2C-88.8041%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "96edbe13b55dcaaab035c7dfff9ea0b88fab827a3fb5ea42cce5d74125c3135b"
+    },
+    {
+     "path": "data/raw/horizons/r04_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27331.1461%2C-88.8041%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "2c956d26bc42092e29e492ef21508ef288208b38f53e71045d51b3d645ad581c"
+    },
+    {
+     "path": "data/raw/horizons/r04_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27331.1461%2C-88.8041%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "4ca426e8d09f84154ccdbae3f1c5ec2e8a0dda68218ab66d2b8d338c84f6415d"
+    },
+    {
+     "path": "data/raw/horizons/r04_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27331.1461%2C-88.8041%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "2543d793dfd4c0954000e874e9a29facd932d69d1a53e2ef1c2e31888a423fbb"
+    },
+    {
+     "path": "data/raw/horizons/r05_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27121.9725%2C-85.5321%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "d68dae74e1cba635d331294a7fc159ad767d1b67c3ab59aa0d4245d91bc05633"
+    },
+    {
+     "path": "data/raw/horizons/r05_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27121.9725%2C-85.5321%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "4664954611cd9f6bc035db2a3a0f73f4d242e3b7f8cbe8ddb1f89676851fc064"
+    },
+    {
+     "path": "data/raw/horizons/r05_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27121.9725%2C-85.5321%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "7ce63528669e3e138379ed04f7664fb5cc7d885d26212cdaa5abc1cc3214aeea"
+    },
+    {
+     "path": "data/raw/horizons/r05_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27121.9725%2C-85.5321%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "624e0f88a9eb9f5fa0ffb9897fb249c839eb2348b003a4173e8040ce5b904222"
+    },
+    {
+     "path": "data/raw/horizons/r06_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2781.4799%2C-84.8952%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "23d1137c90604cfa20c549ea5ea6229470795020bef880f9deeabfe8db960711"
+    },
+    {
+     "path": "data/raw/horizons/r06_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2781.4799%2C-84.8952%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "db8c57abce487a989b73c4b761903bda50a367b81402a69a8ab30ad8cd9858e8"
+    },
+    {
+     "path": "data/raw/horizons/r06_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2781.4799%2C-84.8952%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "69f52b331c05556dd825a6305ae72177fffc2673e77096cb4ed7d62a61ad469d"
+    },
+    {
+     "path": "data/raw/horizons/r06_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%2781.4799%2C-84.8952%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "1b7ffa1eaddaa038fb7e1b2b3884e704eb24507c216195b8e085bb58e4569e59"
+    },
+    {
+     "path": "data/raw/horizons/r07_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27155.1283%2C-85.8534%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "47e4edf0c9bb7e4774a5981569a098462acf5d971ce8c13fa6c474115d0e9d44"
+    },
+    {
+     "path": "data/raw/horizons/r07_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27155.1283%2C-85.8534%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "b499284e1cd221999d221bd5e19037e2bfaef1c46563778980f1c2f29ba380bb"
+    },
+    {
+     "path": "data/raw/horizons/r07_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27155.1283%2C-85.8534%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "a05ea7f25936872f3c85eb5b434115d4c1b3416faf04fde0c24a92c3897b85da"
+    },
+    {
+     "path": "data/raw/horizons/r07_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27155.1283%2C-85.8534%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "53a09432beaa2a3f32a8436819715dd6046b7944824168ccfa614995034aa413"
+    },
+    {
+     "path": "data/raw/horizons/r08_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%274.6226%2C-86.4951%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "a55571ea0830e0734ac523d14845cfc0f67c1e5ebc6058a229027b86952fc8fa"
+    },
+    {
+     "path": "data/raw/horizons/r08_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%274.6226%2C-86.4951%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "d6787e1d0bf560d86602656dd0aa1f1ce2d42e15efae7e4c55cb040903678a38"
+    },
+    {
+     "path": "data/raw/horizons/r08_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%274.6226%2C-86.4951%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "3b567f89f4c054e1bcf9335a3f8862cf37f880d5a2c24d963841b233537fcd15"
+    },
+    {
+     "path": "data/raw/horizons/r08_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%274.6226%2C-86.4951%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "09edf2059f8684dff2e5771b443f1801c9e88f0546b410634e6abddb8ac35906"
+    },
+    {
+     "path": "data/raw/horizons/r09_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27131.4651%2C-85.5294%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "d61e337887af3f41ec68241986aba6887a047234b352a422451cdc2d0a5534e1"
+    },
+    {
+     "path": "data/raw/horizons/r09_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27131.4651%2C-85.5294%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "da6da30b4b783c1f863be941d2afc7c995399a1284d148850f142c1ef159b9e6"
+    },
+    {
+     "path": "data/raw/horizons/r09_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27131.4651%2C-85.5294%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "4350af99f9883155397ceffd3475ecfd19aba30eabb24b4a05ce910b3cc5c325"
+    },
+    {
+     "path": "data/raw/horizons/r09_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27131.4651%2C-85.5294%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "a86eb2abbb815a31250ef882f9e1c239a0849b4d2c399da6c52caa624bb26e60"
+    },
+    {
+     "path": "data/raw/horizons/r10_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27214.1517%2C-84.614%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "c82c7483452f56ab4488f5bdbae128eac38a91a16e16252903b85f5564b99e47"
+    },
+    {
+     "path": "data/raw/horizons/r10_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27214.1517%2C-84.614%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "84a07d4892dc5d6d59d2b4563bb16c6c18620992140ea19c8776d79049f166d5"
+    },
+    {
+     "path": "data/raw/horizons/r10_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27214.1517%2C-84.614%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "2c5de79c9966d1e14c853fa608152f69d4b21ea642de8caca054d876bbd69430"
+    },
+    {
+     "path": "data/raw/horizons/r10_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27214.1517%2C-84.614%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "16621d42d7d494192935501ec6d51c2eb07060bf7eb36b218cf339ff1aa5b0ac"
+    },
+    {
+     "path": "data/raw/horizons/r11_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27107.9969%2C-85.4801%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "55aafa292d6262785e5de596eb20bf732fa3ea5c85070378832eba73132df15b"
+    },
+    {
+     "path": "data/raw/horizons/r11_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27107.9969%2C-85.4801%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "f00a9e24090c4b4a0d6412f7827b4e57a202ce44d846522493bf0753c8bcd00d"
+    },
+    {
+     "path": "data/raw/horizons/r11_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27107.9969%2C-85.4801%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "6dfe74646e7e83054e0e2f3ed1e5033d2b8164589da54f8327b4c8689047af23"
+    },
+    {
+     "path": "data/raw/horizons/r11_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27107.9969%2C-85.4801%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "738a2dbfbf2aba1526413380925f6dd1d79a8c39dd5597bd695160a79648bd0c"
+    },
+    {
+     "path": "data/raw/horizons/r12_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27314.8647%2C-84.6607%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "2488938b32854eeadf04786b551f94d2609d55a63f2d395d33bf5d2fca36a6aa"
+    },
+    {
+     "path": "data/raw/horizons/r12_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27314.8647%2C-84.6607%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "55008083c88ff4a19ea421c7f8c857245098ced2fcd8a3b571492ab2d562d7d2"
+    },
+    {
+     "path": "data/raw/horizons/r12_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27314.8647%2C-84.6607%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "738252cc28c2f61281ba15754a46add34c4091c4d8634950ff40cfa8e18fe6d3"
+    },
+    {
+     "path": "data/raw/horizons/r12_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27314.8647%2C-84.6607%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "bcd0f3e35aaafae0319181cd7d418868828e894c90e1c343975baf128cc7d7ce"
+    },
+    {
+     "path": "data/raw/horizons/ridge_10_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.7%2C-89.45%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161425,
+     "check": "rows",
+     "rows_sha256": "2681f56f9b8e44b1c71c711a38fa571d996aa3884005b8b9903de483faff0f0a"
+    },
+    {
+     "path": "data/raw/horizons/ridge_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.7%2C-89.45%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "b544db0bb4137a94323400b60457aa3cb4ee38ca473dd9e2fa40349ff180e6a0"
+    },
+    {
+     "path": "data/raw/horizons/ridge_399_2008-01-01_2026-08-01_2h.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.7%2C-89.45%2C0%27&START_TIME=%272008-01-01%2000%3A00%27&STOP_TIME=%272026-08-01%2000%3A00%27&STEP_SIZE=%27120%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 4161980,
+     "check": "rows",
+     "rows_sha256": "9e29781b43e883a17241da03979af19269e7b948c0e9993f41be1afd8e43a8f2"
+    },
+    {
+     "path": "data/raw/horizons/ridge_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27222.7%2C-89.45%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "529230c59d992125a4bb3db70b84073804148d1785e61b8ced2a09621a01aca2"
+    },
+    {
+     "path": "data/raw/horizons/shk_10_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27203.97%2C-89.7849%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 454540,
+     "check": "rows",
+     "rows_sha256": "11da3237ab075995c306ea1b85f8dbac5cb80dadd7b46e3ba41e93307f55d79c"
+    },
+    {
+     "path": "data/raw/horizons/shk_399_2027-01-01_2028-01-01_60m.txt",
+     "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27399%27&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&CENTER=%27coord%40301%27&COORD_TYPE=%27GEODETIC%27&SITE_COORD=%27203.97%2C-89.7849%2C0%27&START_TIME=%272027-01-01%2000%3A00%27&STOP_TIME=%272028-01-01%2000%3A00%27&STEP_SIZE=%2760%20m%27&QUANTITIES=%274%27&CSV_FORMAT=%27YES%27&ANG_FORMAT=%27DEG%27&APPARENT=%27AIRLESS%27",
+     "bytes": 455095,
+     "check": "rows",
+     "rows_sha256": "edbf1c81a6a0b5dce41b4e4fd198e89c6b585571c80abef00aac27c9c3a24129"
+    }
+   ]
+  },
+  {
+   "id": "stars",
+   "title": "Yale Bright Star Catalogue, 5th ed. (sky rendering)",
+   "source": "CDS VizieR V/50",
+   "files": [
+    {
+     "path": "data/raw/stars/bsc5_vizier.tsv",
+     "url": "https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=V/50/catalog&-out=HR,_RA,_DE,Vmag,B-V,Name&-out.max=unlimited&-oc.form=d",
+     "bytes": 398025,
+     "check": "rows",
+     "rows_sha256": "92cf481f9c761e538d769b664f3ece2d312423e6b06c5bdd73aeb3c6ef2285fa",
+     "mirrors": [
+      "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=V/50/catalog&-out=HR,_RA,_DE,Vmag,B-V,Name&-out.max=unlimited&-oc.form=d"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imagery",
+   "title": "LOLA north-polar DEMs and global LDEM_16, inputs for building the globe tiles",
+   "source": "NASA PDS Geosciences Node",
+   "files": [
+    {
+     "path": "data/raw/lola_global/ldem_16.img",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_16.img",
+     "bytes": 33177600,
+     "check": "sha256",
+     "sha256": "a511e40d7a3ea3275945b4da2a1df377133264fab0be94b7434b1cf8907254cb"
+    },
+    {
+     "path": "data/raw/lola_global/ldem_16.lbl",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/img/ldem_16.lbl",
+     "bytes": 5121,
+     "check": "sha256",
+     "sha256": "9aef29463ccc6ed3a3fbe0df3ecd830a99c69e16b564f455507dee2697096579"
+    },
+    {
+     "path": "data/raw/lola_north/ldem_75n_240m.img",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_75n_240m.img",
+     "bytes": 29062688,
+     "check": "sha256",
+     "sha256": "c63d22385f182f276dd90adb7755e3070e725c3cd50b6d0d20d76a94edbba41b"
+    },
+    {
+     "path": "data/raw/lola_north/ldem_75n_240m.lbl",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_75n_240m.lbl",
+     "bytes": 4917,
+     "check": "sha256",
+     "sha256": "0186c1953167d57fb39be070b1c579d3a7595655d5f8f5e8dbc5414d9f18eb87"
+    },
+    {
+     "path": "data/raw/lola_north/ldem_80n_80m.img",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_80n_80m.img",
+     "bytes": 115520000,
+     "check": "sha256",
+     "sha256": "dfaa75f2d1337258eaf5e13c0195fcad0d70794911b2daf689026ed12dce2233"
+    },
+    {
+     "path": "data/raw/lola_north/ldem_80n_80m.lbl",
+     "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/polar/img/ldem_80n_80m.lbl",
+     "bytes": 4913,
+     "check": "sha256",
+     "sha256": "d476d431e8939a5dc51fc123d5292693f1c23209a9d7dd4e2f630a53d5894e64"
+    }
+   ]
+  },
+  {
+   "id": "docs",
+   "title": "Reference papers and handbooks (PDF, not used by the app)",
+   "source": "JPL DSN, NASA NTRS",
+   "files": [
+    {
+     "path": "data/raw/docs/Barker2021_Improved_LOLA_south_pole.pdf",
+     "url": "https://ntrs.nasa.gov/api/citations/20205009660/downloads/Mike%20Barker_%20Paper_%20Improved%20Lola.pdf",
+     "bytes": 9853591,
+     "check": "sha256",
+     "sha256": "99bf83472a2ccc87df3764fd87459a612e9dfa8620969107f758933ea6dc9af3"
+    },
+    {
+     "path": "data/raw/docs/DSN_810-005_301P.pdf",
+     "url": "https://deepspace.jpl.nasa.gov/dsndocs/810-005/301/301P.pdf",
+     "bytes": 2745535,
+     "check": "sha256",
+     "sha256": "53d8c28eddde48a2212b403422689a11fc0ff75fcab830a1e2ec00cdf8a4e160"
+    },
+    {
+     "path": "data/raw/docs/Glaser2018_illumination_lunar_poles.pdf",
+     "url": "https://ntrs.nasa.gov/api/citations/20170007365/downloads/20170007365.pdf",
+     "bytes": 4472843,
+     "check": "sha256",
+     "sha256": "e6db2fcfcabf09f0541e0f2e7ff8ec1217b2e8edee0d2797016b6dd89ed1a2f7"
+    }
+   ]
+  }
+ ]
+}

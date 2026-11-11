@@ -29,6 +29,16 @@ from scipy.ndimage import gaussian_filter, map_coordinates, median_filter
 
 ROOT = Path(__file__).resolve().parents[1]
 WS = ROOT.parent
+
+
+def raw_path(rel: str, legacy: str) -> Path:
+    """An input file under data/raw/ (fetched by scripts/download_data.py); falls back to the original workspace download
+    folder (legacy, relative to the folder that contains penumbra_mockup) when only that copy exists."""
+    p = ROOT / "data" / "raw" / rel
+    q = WS / legacy
+    return q if not p.exists() and q.exists() else p
+
+
 ORIGIN = 1095930.0
 SPAN0 = 2 * ORIGIN
 CAP_RHO = 441_000.0  # |lat| = 75.6 deg is at rho = 439 km
@@ -54,10 +64,12 @@ NAC_DARK = (12.0, 42.0)          # NAC is clean down to low grey levels: only ne
 POLE = {
     "s": dict(map="/maps/earth/moon_spole.map", layer="LRO_WAC_south", srs="EPSG:32761", trek="SP",
               nac="LRO_NAC_AvgMosaic_SPole855_1mp", ce2="CE2_Hillshade_20m_SP", lola="LRO_LOLA_Shade_SPolar875_10m",
-              z80=WS / "research/top3_probes/data/lola/ldem_80s_80m.img", z240=WS / "research/top3_probes/data/lola/ldem_75s_240m.img"),
+              z80=raw_path("lola/ldem_80s_80m.img", "research/top3_probes/data/lola/ldem_80s_80m.img"),
+              z240=raw_path("lola/ldem_75s_240m.img", "research/top3_probes/data/lola/ldem_75s_240m.img")),
     "n": dict(map="/maps/earth/moon_npole.map", layer="LRO_WAC_north", srs="EPSG:32661", trek="NP",
               nac="LRO_NAC_AvgMosaic_NPole855_1mp", ce2="CE2_Hillshade_20m_NP", lola="LRO_LOLA_Shade_NPolar875_10m",
-              z80=WS / "penumbra_prep/data/raw/lola_north/ldem_80n_80m.img", z240=WS / "penumbra_prep/data/raw/lola_north/ldem_75n_240m.img"),
+              z80=raw_path("lola_north/ldem_80n_80m.img", "penumbra_prep/data/raw/lola_north/ldem_80n_80m.img"),
+              z240=raw_path("lola_north/ldem_75n_240m.img", "penumbra_prep/data/raw/lola_north/ldem_75n_240m.img")),
 }
 
 

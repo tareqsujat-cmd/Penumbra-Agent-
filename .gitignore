@@ -1,15 +1,17 @@
 node_modules/
 dist/
-tiles/
-data/raw/
-data/cache/
 __pycache__/
 .pytest_cache/
+
+# data and generated products: download/build them locally (see DATA_DOWNLOAD_MANUAL.md)
+/data/raw/
+/data/cache/
+/tiles/
+/screenshots/
 
 # local logs and run artefacts
 *.log
 data/vitest.json
-screenshots/
 .env
 .env.local
 .venv/

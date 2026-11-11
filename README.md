@@ -26,7 +26,7 @@ Penumbra traces the real terrain skyline from NASA 5 m and LOLA elevation data, 
 - **Mission calendar** with Sun, Earth, DSN and power bands. Dragging the landing date updates everything.
 - **DSN geometric visibility** at Goldstone, Madrid and Canberra, with the caveat that it does not guarantee scheduled service.
 - **Power scenario.** A VIPER preset built from NASA values, plus assumption-labelled presets.
-- **Skyline dome and panorama, site comparison (2–4 sites), Simple and Planner modes.**
+- **Skyline dome and panorama, site comparison (2–5 sites), Simple and Planner modes.**
 - **Validation and provenance in the app, JSON export, URL permalinks, and offline operation.**
 
 ## Quick start (Windows, macOS, Linux)
@@ -37,9 +37,10 @@ python -m venv .venv && .venv/Scripts/activate        # macOS/Linux: source .ven
 pip install -r backend/requirements.txt               # offline: pip install --no-index --find-links ../penumbra_prep/env/wheelhouse -r backend/requirements.txt
 # 2. Frontend dependencies
 npm ci                                                 # offline: npm ci --prefer-offline
-# 3. Data (raw NASA/JPL files are linked from penumbra_prep/ and research/ data folders)
-python tasks.py link                                   # hard links + SHA-256 into data/metadata/
+# 3. Data (not in the repository; see DATA_DOWNLOAD_MANUAL.md)
+python tasks.py data                                   # download + verify the raw NASA/JPL files (3.3 GB) into data/raw/
 python tasks.py precompute                             # horizon grids for the 5 sites, about 5 minutes on 16 threads
+python tasks.py imagery                                # globe imagery tiles (downloads from USGS and NASA Moon Trek)
 # 4. Check and run
 python tasks.py doctor
 python tasks.py dev                                    # http://127.0.0.1:4173
@@ -79,7 +80,7 @@ Everything the judged flow needs is local: terrain, SPICE kernels, cached produc
 | Gläser et al. (2018), Planetary and Space Science 162 | Validation V2 |
 | LROC WAC/NAC mosaics (USGS Astrogeology, NASA Moon Trek), Kaguya TC (JAXA), Chang'e-2 hillshade | Globe imagery only |
 
-Files, versions, frames and checksums are in [docs/DATA_PROVENANCE.md](docs/DATA_PROVENANCE.md).
+The data is not stored in this repository. `python tasks.py data` downloads every file from its source and checks it against recorded checksums; see [DATA_DOWNLOAD_MANUAL.md](DATA_DOWNLOAD_MANUAL.md). Files, versions, frames and checksums are in [docs/DATA_PROVENANCE.md](docs/DATA_PROVENANCE.md).
 
 ## Validation (tolerances fixed in advance)
 

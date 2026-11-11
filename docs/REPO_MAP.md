@@ -9,21 +9,25 @@ penumbra_mockup/
 │   ├── api/              endpoints and every error path (pytest + FastAPI TestClient)
 │   ├── frontend/         Vitest + Testing Library
 │   └── e2e/              Playwright journeys A-C, responsive and offline checks
-├── scripts/              link_data, build_datasets, precompute, benchmark, gen_docs; imagery builders (polarlib,
+├── scripts/              download_data (+ build_download_manifest), link_data, build_datasets, precompute, benchmark,
+│                         gen_docs; imagery builders (polarlib,
 │                         prepare_trek, prepare_site_images, prepare_tiles, prepare_globe, prepare_polar)
 ├── data/
-│   ├── raw/              hard links to the NASA/JPL files (not committed)
+│   ├── raw/              NASA/JPL files from scripts/download_data.py or tasks.py link (not committed)
 │   ├── cache/            computed products (not committed)
-│   └── metadata/         files.json (SHA-256), datasets.json (sources, frames, versions)
-├── tiles/                globe imagery tile cache (not committed)
+│   └── metadata/         files.json (SHA-256), datasets.json (sources, frames, versions), downloads.json (download list)
+├── tiles/                globe imagery tiles from tasks.py imagery (not committed)
 ├── docs/                 method, validation, provenance, performance, test report, UI references
-├── screenshots/          QA and e2e screenshots
+├── screenshots/          QA and e2e screenshots (only the two README images are committed)
 ├── serve.py              tile builders (imported by the backend for /tiles)
-├── tasks.py              doctor · link · precompute · build · dev · test
-└── README.md, ARCHITECTURE.md, .env.example
+├── tasks.py              doctor · data · imagery · link · precompute · build · dev · test
+└── README.md, DATA_DOWNLOAD_MANUAL.md, ARCHITECTURE.md, .env.example
 ```
 
-## Outside this folder (read-only inputs)
+## Outside this folder (read-only inputs, original workstation only)
+
+A fresh clone does not need these: `python tasks.py data` downloads the same files from their sources.
+
 
 - `../penumbra_prep/data/raw/`: raw NASA/JPL downloads with checksums (SPICE kernels, PGDA 78 clones and tiles, reference PDFs).
 - `../research/top3_probes/data/`: raw NASA data downloaded during research (LOLA DEMs, PGDA 69 maps, PGDA 78 Site01/04 surfaces, JPL Horizons tables).

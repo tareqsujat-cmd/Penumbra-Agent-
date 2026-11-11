@@ -28,8 +28,9 @@ from scipy.ndimage import map_coordinates
 
 ROOT = Path(__file__).resolve().parents[1]
 TILES = ROOT / "tiles"
-PROBE_LOLA = ROOT.parent / "research" / "top3_probes" / "data" / "lola"
-RAW = ROOT.parent / "penumbra_prep" / "data" / "raw"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from polarlib import raw_path  # noqa: E402
+
 WMS = ("https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/earth/moon_simp_cyl.map&SERVICE=WMS&VERSION=1.1.1"
        "&REQUEST=GetMap&LAYERS=LROC_WAC&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg")
 WAC_PREFETCH = 6
@@ -85,8 +86,10 @@ def wac_level(L: int) -> None:
 
 
 def load_polar():
-    z80 = np.fromfile(PROBE_LOLA / "ldem_80s_80m.img", dtype="<i2").reshape(7600, 7600).astype(np.float32) * 0.5
-    z240 = np.fromfile(PROBE_LOLA / "ldem_75s_240m.img", dtype="<i2").reshape(3812, 3812).astype(np.float32) * 0.5
+    z80 = np.fromfile(raw_path("lola/ldem_80s_80m.img", "research/top3_probes/data/lola/ldem_80s_80m.img"),
+                      dtype="<i2").reshape(7600, 7600).astype(np.float32) * 0.5
+    z240 = np.fromfile(raw_path("lola/ldem_75s_240m.img", "research/top3_probes/data/lola/ldem_75s_240m.img"),
+                       dtype="<i2").reshape(3812, 3812).astype(np.float32) * 0.5
     return (z80, 80.0, (7600 - 1) / 2.0), (z240, 240.0, (3812 - 1) / 2.0)
 
 
@@ -133,7 +136,7 @@ def polar_tiles() -> None:
 
 
 def ldem16() -> None:
-    z = np.fromfile(RAW / "lola_global/ldem_16.img", dtype="<i2").reshape(2880, 5760)
+    z = np.fromfile(raw_path("lola_global/ldem_16.img", "penumbra_prep/data/raw/lola_global/ldem_16.img"), dtype="<i2").reshape(2880, 5760)
     np.roll(z, 2880, axis=1).astype("<i2").tofile(TILES / "ldem16.bin")
     print("ldem16.bin written", flush=True)
 

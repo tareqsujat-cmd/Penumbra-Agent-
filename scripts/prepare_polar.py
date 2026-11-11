@@ -29,9 +29,11 @@ import numpy as np
 from PIL import Image
 from scipy.ndimage import map_coordinates, median_filter, uniform_filter
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from polarlib import raw_path  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 TILES = ROOT / "tiles"
-WS = ROOT.parent
 GEN = ROOT / "src" / "data" / "generated"
 S = 3812 * 240 / 2
 N = 65
@@ -41,9 +43,11 @@ LIM80 = 3799.5 * 80 * 0.998
 WMS = "https://planetarymaps.usgs.gov/cgi-bin/mapserv?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&FORMAT=image/jpeg"
 POLE = {
     "s": dict(map="/maps/earth/moon_spole.map", layer="LRO_WAC_south", srs="EPSG:32761",
-              z80=WS / "research/top3_probes/data/lola/ldem_80s_80m.img", z240=WS / "research/top3_probes/data/lola/ldem_75s_240m.img"),
+              z80=raw_path("lola/ldem_80s_80m.img", "research/top3_probes/data/lola/ldem_80s_80m.img"),
+              z240=raw_path("lola/ldem_75s_240m.img", "research/top3_probes/data/lola/ldem_75s_240m.img")),
     "n": dict(map="/maps/earth/moon_npole.map", layer="LRO_WAC_north", srs="EPSG:32661",
-              z80=WS / "penumbra_prep/data/raw/lola_north/ldem_80n_80m.img", z240=WS / "penumbra_prep/data/raw/lola_north/ldem_75n_240m.img"),
+              z80=raw_path("lola_north/ldem_80n_80m.img", "penumbra_prep/data/raw/lola_north/ldem_80n_80m.img"),
+              z240=raw_path("lola_north/ldem_75n_240m.img", "penumbra_prep/data/raw/lola_north/ldem_75n_240m.img")),
 }
 
 
