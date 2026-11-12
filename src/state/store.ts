@@ -47,6 +47,10 @@ export interface AppState {
   verticalExaggeration: 1 | 5 | 10;
   dialog: null | "data" | "export" | "vehicle";
   toast: string | null;
+  /** the assistant side panel */
+  assistantOpen: boolean;
+  /** something the assistant panel should start with when it opens (e.g. the walkthrough, from the welcome bubble) */
+  assistantStart: null | "tour";
 }
 
 /** 2027-06-29 13:00 UTC (hour index in the 2027 ephemeris). */
@@ -105,6 +109,8 @@ let state: AppState = {
   verticalExaggeration: 10,
   dialog: null,
   toast: null,
+  assistantOpen: false,
+  assistantStart: null,
   ...fromUrl(),
 };
 
@@ -118,6 +124,14 @@ export function setState(patch: Partial<AppState> | ((s: AppState) => Partial<Ap
   const p = typeof patch === "function" ? patch(state) : patch;
   state = { ...state, ...p };
   listeners.forEach((l) => l());
+}
+
+/** Listen to every state change outside React (used by the assistant's built-in guide); returns an unsubscribe. */
+export function subscribe(listener: () => void): () => void {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
 }
 
 export function useApp<T>(select: (s: AppState) => T): T {

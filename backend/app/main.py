@@ -21,11 +21,12 @@ from pathlib import Path
 import numpy as np
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import FileResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, Response, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.concurrency import run_in_threadpool
 
 from . import config
+from .assistant import agent as AG
 from .schemas import CompareRequest, EnduranceRequest, RiskRequest, RobustRequest, VisibilityRequest
 from .science import coordinates as C
 from .science import dsn as D
@@ -191,36 +192,8 @@ async def robust_aim(req: RobustRequest):
 async def compare(req: CompareRequest):
     for s in req.sites:
         S.get(s)
-    model = _model(req.model)
-    veh = _vehicle(req.vehicle)
-
-    def run():
-        # the comparison is for a mission: every site is scored on the same landing window (sunlight in the first
-        # windowDays days after the landing date), so changing the date can change the ranking
-        n_year = eph.hours_in_year(req.year)
-        start = min(req.startIdx, n_year - 24)
-        hours = min(req.windowDays * 24, n_year - start)
-        rows = []
-        for sid in req.sites:
-            ra = A.robust(sid, model, req.percentile, req.year, req.searchRadius, earth_margin=req.earthMarginDeg,
-                          dsn_mask=req.dsnMaskDeg, start=start, hours=hours)
-            aim = (ra["robust"]["x"], ra["robust"]["y"])
-            rk = A.risk(sid, aim, model, req.percentile, req.year, earth_margin=req.earthMarginDeg, dsn_mask=req.dsnMaskDeg,
-                        start=start, hours=hours)
-            v = A.visibility(sid, aim[0], aim[1], req.year, req.startIdx, req.windowDays * 24, req.earthMarginDeg, req.dsnMaskDeg, veh, None)
-            day, pct = A.best_landing_day(v["daily_sun_pct"], req.windowDays)
-            rows.append({"site": sid, "name": S.get(sid).name, "brightest": ra["best_nominal"]["value"],
-                         "brightestPq": ra["best_nominal"]["pq"], "robustAt": {"x": aim[0], "y": aim[1]},
-                         "robustNominal": ra["robust"]["value"], "p50": rk["p"][50], "p20": rk["p"][20], "p10": rk["p"][10],
-                         "p05": rk["p"][5], "longestDarkH": v["summary"]["longest_dark_h"], "earthPct": v["summary"]["earth_pct"],
-                         "dsnPct": v["summary"]["dsn_pct"], "windowSunPct": v["summary"]["sunlight_pct"],
-                         "bestLandingIdx": day * 24, "bestLandingSunPct": round(pct, 2), "fieldKind": "computed"})
-        key = {50: "p50", 20: "p20", 10: "p10", 5: "p05"}[req.percentile]
-        ranking = [r["site"] for r in sorted(rows, key=lambda r: -r[key])]
-        return {"rows": rows, "ranking": ranking, "window": {"startIdx": start, "hours": hours},
-                "rankedBy": f"P{req.percentile} sunlight in the first {hours // 24} days after landing, at each site's robust aim"}
-
-    return await compute(run)
+    return await compute(A.compare, list(req.sites), _model(req.model), req.percentile, req.year, req.startIdx,
+                         req.windowDays, _vehicle(req.vehicle), req.searchRadius, req.earthMarginDeg, req.dsnMaskDeg)
 
 
 @app.get("/api/validation")
@@ -253,6 +226,26 @@ def _sky_cached(year: int) -> dict:
 @app.get("/api/dsn")
 def dsn_info():
     return {"stations": {k: v for k, v in eph.STATIONS.items()}, "masks_deg": D.MASKS, "caveat": D.CAVEAT}
+
+
+# ---------------------------------------------------------------------------------------------- assistant
+@app.get("/api/assistant/status")
+def assistant_status():
+    return AG.status()
+
+
+@app.post("/api/assistant")
+async def assistant(req: AG.AssistantRequest):
+    """Server-sent events: one JSON object per `data:` line (text deltas, then done / notice / error)."""
+    st = AG.status()
+    if not st["available"]:
+        return _err(503, "ASSISTANT_UNAVAILABLE", st["reason"])
+
+    async def events():
+        async for ev in AG.stream_reply(req):
+            yield f"data: {json.dumps(ev)}\n\n"
+
+    return StreamingResponse(events(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
 # ---------------------------------------------------------------------------------------------- tiles + static app

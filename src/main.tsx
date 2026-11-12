@@ -5,6 +5,7 @@ import "./styles/components.css";
 import "./styles/app.css";
 import "./styles/theme.css";
 import "./styles/report.css";
+import "./styles/assistant.css";
 import { App } from "./app/App";
 
 createRoot(document.getElementById("root")!).render(

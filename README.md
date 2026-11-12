@@ -48,6 +48,57 @@ python tasks.py dev                                    # http://127.0.0.1:4173
 
 Permalinks open straight on a view, for example `http://127.0.0.1:4173/?mode=planner&site=cr1`, `?mode=simple&site=shk` or `?mode=planner&view=compare`.
 
+## Assistant
+
+The **Ask** button in the header opens **Armstrong**, Penumbra's assistant. How it works and everything it can do:
+[ASSISTANT.md](ASSISTANT.md). It runs in one of two modes:
+
+- **Built-in guide (default, free, works offline, no AI).** **Armstrong**, a guide written for non-specialists:
+  - on a first visit, offers a short tour from a small bubble next to **Ask** (shown once);
+  - greets you with what you're looking at and suggests a first move;
+  - **What's this?**: tap it, then tap anything on screen (a number, the calendar, the map, a button) to have it
+    explained in plain words with your numbers;
+  - technical words in answers (P10, robust aim, DSN, landing zone…) can be tapped for a plain explanation, short
+    answers come with **Tell me more**, and every answer can be **read aloud** (the browser's built-in voice);
+  - a **Your plan** strip shows your site, date, accuracy and caution level, how many steps are done, and
+    **Continue**;
+  - every change it makes for you can be **undone** with one click;
+  - **walks you through** planning a landing (site, date, landing accuracy, safer target, skyline, compare, export)
+    with a progress bar, moving on by itself when you finish a step;
+  - **explains every choice in plain words** as you make it, using your own numbers (how many of your first days
+    get sunshine, when the first night comes, how long the battery lasts) and suggests the next step (switch off
+    with **Tips off**);
+  - **shows you where** controls are by highlighting them on screen;
+  - **helps you decide**: "Help me choose a site" and "Help me pick a landing date" ask two or three quick questions
+    (what matters most, how precise your lander is, how careful to be), then recommend with reasons and trade-offs;
+  - understands typed requests and follow-ups, e.g. "switch to Shackleton", "what if I land on 15 July?",
+    "set accuracy to 400 m", "and Malapert?", "yes" / "no" / "show me";
+  - answers lead with an **In short** verdict; every number comes from Penumbra's own computations.
+
+  Suggested changes appear as cards with a **Do it for me** button; nothing changes until you click. Code:
+  `src/features/assistant/guide/` (`engine.ts` answers, `plain.ts` plain-language explanations, `nlu.ts` typed text,
+  `watch.ts` tips, `spotlight.ts` highlighting).
+- **AI assistant (when the server has a Claude API key).** Answers any question in natural language, as described
+  below. It switches on automatically when `ANTHROPIC_API_KEY` is set; otherwise the built-in guide is used.
+
+The AI assistant explains how to use the app, helps with choices (site, date, landing uncertainty, robustness level,
+aim) and explains results in plain language. Each
+question carries a snapshot of the current screen and the numbers the backend has already computed; the assistant
+is instructed never to state a mission number that does not come from that snapshot or from its analysis tools.
+
+- **Analysis tools.** For "what if" questions (another date, site, aim, landing accuracy, robustness level, vehicle),
+  comparisons and best landing dates, the assistant calls tools that run the same science code as the API
+  (`backend/app/assistant/tools.py`). The panel shows what is being computed and lists it under the answer.
+- **Proposed changes.** When asked to set something up, the assistant proposes a change as a card listing exactly
+  what will change. Nothing changes until you click **Apply**; it can guide you through the mission sequence one
+  step at a time.
+
+- Set `ANTHROPIC_API_KEY` in the environment or in `.env` (git-ignored) and restart the server.
+- Model and effort: `PENUMBRA_ASSISTANT_MODEL` (default `claude-opus-5-5`), `PENUMBRA_ASSISTANT_EFFORT` (default `medium`).
+- It needs the Claude API, so it is off when `PENUMBRA_OFFLINE=1`; `PENUMBRA_ASSISTANT=0` switches it off. When it is
+  off, the panel says why instead of failing.
+- Code: `backend/app/assistant/` (system prompt in `guide.py`), `src/features/assistant/`.
+
 ## Tests
 
 ```bash

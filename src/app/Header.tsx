@@ -8,6 +8,7 @@ import { Prov } from "../components/ui";
 import { fmtDate } from "../utils/format";
 import type { SiteId } from "../types";
 import type { Mode } from "../state/store";
+import { AssistantButton } from "../features/assistant/AssistantButton";
 
 
 const LOAD_STAGES = ["Loading 5 m terrain and the performance grid…", "Computing Sun/Earth geometry…", "Evaluating the landing zone…"];
@@ -173,6 +174,7 @@ export function Header() {
       )}
       <div className="pn-hdr__status">
         {loading && <span className="ids-indicator" data-state="busy">Computing</span>}
+        <AssistantButton />
         <button className="pn-hdr__data" onClick={() => setState({ dialog: "data" })} title="Data and provenance">
           <span className="ids-overline">{t.data}</span>
           <span className="pn-hdr__frame">MOON_ME · NASA/JPL</span>

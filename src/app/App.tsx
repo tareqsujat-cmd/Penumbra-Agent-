@@ -23,6 +23,8 @@ import { ResearchReport } from "../features/report/ResearchReport";
 import { StarBackdrop } from "../components/StarBackdrop";
 import { loadSky } from "../features/sky/stars";
 import { MissionSequence } from "./MissionSequence";
+import { AssistantPanel } from "../features/assistant/AssistantPanel";
+import { GuideWelcome } from "../features/assistant/GuideWelcome";
 
 function Toast() {
   const toast = useApp((s) => s.toast);
@@ -213,6 +215,8 @@ export function App() {
         <DataDialog />
         <ExportDialog />
         <VehicleDialog />
+        <AssistantPanel />
+        <GuideWelcome />
         <Toast />
       </div>
     </Tooltip.Provider>

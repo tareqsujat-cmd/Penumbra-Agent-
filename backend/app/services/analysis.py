@@ -141,6 +141,32 @@ def risk(site_id: str, aim: tuple[float, float], model: Model, q: int, year: int
     return landing_risk(sun, aim, offsets(site_id, model, n, seed), q, earth)
 
 
+def compare(site_ids: list[str], model: Model, q: int, year: int, start_idx: int, window_days: int, vehicle: Vehicle,
+            search_radius: float = 450.0, earth_margin: float = 2.0, dsn_mask: float = 6.0) -> dict:
+    """Score each site at its own robust aim over the same mission window (sunlight in the first `window_days` days
+    after the landing date), so changing the date can change the ranking. Used by POST /api/compare and the assistant."""
+    n_year = eph.hours_in_year(year)
+    start = min(start_idx, n_year - 24)
+    hours = min(window_days * 24, n_year - start)
+    rows = []
+    for sid in site_ids:
+        ra = robust(sid, model, q, year, search_radius, earth_margin=earth_margin, dsn_mask=dsn_mask, start=start, hours=hours)
+        aim = (ra["robust"]["x"], ra["robust"]["y"])
+        rk = risk(sid, aim, model, q, year, earth_margin=earth_margin, dsn_mask=dsn_mask, start=start, hours=hours)
+        v = visibility(sid, aim[0], aim[1], year, start_idx, window_days * 24, earth_margin, dsn_mask, vehicle, None)
+        day, pct = best_landing_day(v["daily_sun_pct"], window_days)
+        rows.append({"site": sid, "name": S.get(sid).name, "brightest": ra["best_nominal"]["value"],
+                     "brightestPq": ra["best_nominal"]["pq"], "robustAt": {"x": aim[0], "y": aim[1]},
+                     "robustNominal": ra["robust"]["value"], "p50": rk["p"][50], "p20": rk["p"][20], "p10": rk["p"][10],
+                     "p05": rk["p"][5], "longestDarkH": v["summary"]["longest_dark_h"], "earthPct": v["summary"]["earth_pct"],
+                     "dsnPct": v["summary"]["dsn_pct"], "windowSunPct": v["summary"]["sunlight_pct"],
+                     "bestLandingIdx": day * 24, "bestLandingSunPct": round(pct, 2), "fieldKind": "computed"})
+    key = {50: "p50", 20: "p20", 10: "p10", 5: "p05"}[q]
+    ranking = [r["site"] for r in sorted(rows, key=lambda r: -r[key])]
+    return {"rows": rows, "ranking": ranking, "window": {"startIdx": start, "hours": hours},
+            "rankedBy": f"P{q} sunlight in the first {hours // 24} days after landing, at each site's robust aim"}
+
+
 def robust(site_id: str, model: Model, q: int, year: int, search_radius: float = 450.0, n: int = 2000, seed: int = 7,
            earth_margin: float = 2.0, dsn_mask: float = 6.0, start: int | None = None, hours: int | None = None,
            slope_max: float | None = None) -> dict:
