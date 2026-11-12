@@ -63,7 +63,8 @@ python tasks.py dev                                     # open http://127.0.0.1:
 ```
 
 Armstrong's built-in guide works straight away: no key, no account, no internet needed once the data is
-downloaded. To add the free space assistant (a Groq key) or the optional Claude assistant, see [Setup](#setup).
+downloaded. To add the free space assistant, [get a free Groq API key](#getting-a-free-groq-api-key); for the
+optional Claude assistant, see [Setup](#setup).
 
 **If `tasks.py data` reports a checksum mismatch for `earth_latest_high_prec.bpc`:** NASA's NAIF team republishes
 this Earth-orientation file regularly, so the checksum recorded in the project goes out of date. The app needs the
@@ -245,13 +246,27 @@ assistant is set up (never any key).
 ### Space assistant (free LLM chat)
 
 The space assistant calls any provider with an OpenAI-compatible API from the server (`POST /api/chat`, code in
-`backend/app/assistant/llm_chat.py`), so the key never reaches the browser. Set three lines in `.env` and restart:
+`backend/app/assistant/llm_chat.py`), so the key never reaches the browser. By default it uses the **Groq API**,
+which has a free tier. (Groq, with a *q*, at groq.com, runs open models quickly. It is not xAI's *Grok* chatbot.)
 
-```
-LLM_BASE_URL=https://api.groq.com/openai/v1
-LLM_API_KEY=gsk_...            # from https://console.groq.com/keys (free tier, no credit card)
-LLM_MODEL=openai/gpt-oss-120b
-```
+#### Getting a free Groq API key
+
+1. Go to [console.groq.com](https://console.groq.com) and sign in (Google, GitHub or email). No credit card is needed.
+2. Open **API Keys** ([console.groq.com/keys](https://console.groq.com/keys)) and click **Create API Key**. Give it a
+   name such as `Penumbra`.
+3. Copy the key straight away; Groq shows it only once. It starts with `gsk_`.
+4. Put it in `.env` at the project root (the file is git-ignored, so the key is never committed), right after
+   `LLM_API_KEY=`, with no spaces or quotes:
+
+   ```
+   LLM_BASE_URL=https://api.groq.com/openai/v1
+   LLM_API_KEY=gsk_...
+   LLM_MODEL=openai/gpt-oss-120b
+   ```
+5. Restart the server (`python tasks.py dev`). To check the key and model first, run the terminal chatbot below.
+
+Keep the key private: don't share it or put it in code. If it leaks, delete it on the same API Keys page and create a
+new one. Groq's free tier is rate-limited; when the limit is reached, the chat asks you to wait a minute.
 
 Switching provider is a matter of changing those lines: `.env.example` lists Gemini, OpenRouter (models ending in
 `:free`) and Ollama (local) as alternatives. Each question sends a system prompt (who the assistant is, Penumbra's
