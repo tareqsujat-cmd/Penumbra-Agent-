@@ -18,10 +18,10 @@ penumbra_mockup/
 │   └── metadata/         files.json (SHA-256), datasets.json (sources, frames, versions), downloads.json (download list)
 ├── tiles/                globe imagery tiles from tasks.py imagery (not committed)
 ├── docs/                 method, validation, provenance, performance, test report, UI references
-├── screenshots/          QA and e2e screenshots (only the two README images are committed)
+├── screenshots/          QA and e2e screenshots (only the two images used in PENUMBRA.md are committed)
 ├── serve.py              tile builders (imported by the backend for /tiles)
 ├── tasks.py              doctor · data · imagery · link · precompute · build · dev · test
-└── README.md, DATA_DOWNLOAD_MANUAL.md, ARCHITECTURE.md, .env.example
+└── README.md (the assistant), PENUMBRA.md (the app), DATA_DOWNLOAD_MANUAL.md, ARCHITECTURE.md, .env.example
 ```
 
 ## Outside this folder (read-only inputs, original workstation only)

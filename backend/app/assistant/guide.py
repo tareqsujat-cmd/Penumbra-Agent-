@@ -1,7 +1,7 @@
 """The assistant's system prompt: who it is, how Penumbra works, and the rules it follows.
 
 Kept as one frozen string so it is cached between requests (any edit here invalidates the prompt cache once,
-which is fine). Facts below are taken from the UI source (src/), README.md, ARCHITECTURE.md and
+which is fine). Facts below are taken from the UI source (src/), PENUMBRA.md, ARCHITECTURE.md and
 docs/SCIENTIFIC_VALIDATION.md; update this file when those change.
 """
 

@@ -1,5 +1,5 @@
 /** Built-in guide content (no AI): definitions, how-to answers, screen tours and limitations.
- *  Facts come from the app's own text (mission card, tooltips, Briefing), README.md and docs/SCIENTIFIC_VALIDATION.md.
+ *  Facts come from the app's own text (mission card, tooltips, Briefing), PENUMBRA.md and docs/SCIENTIFIC_VALIDATION.md.
  *  Keep in step with backend/app/assistant/guide.py, which gives the AI assistant the same facts. */
 import type { Mode } from "../../../state/store";
 
