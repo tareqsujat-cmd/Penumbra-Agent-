@@ -1,12 +1,20 @@
-/** Minimal, safe renderer for assistant replies: paragraphs, "- " / "1. " lists, **bold** and _italic_.
- *  Builds React elements only (never innerHTML), so model output cannot inject markup. Known technical words can
- *  be turned into buttons that explain them (the built-in guide's tap-to-explain). */
+/** Minimal, safe renderer for assistant replies: paragraphs, "- " / "1. " lists, **bold**, _italic_, ``` code
+ *  blocks and | pipe | tables. Builds React elements only (never innerHTML), so model output cannot inject markup.
+ *  Known technical words can be turned into buttons that explain them (the built-in guide's tap-to-explain). */
 import type { ReactNode } from "react";
 
-export type Block = { kind: "p"; text: string } | { kind: "ul" | "ol"; items: string[] };
+export type Block =
+  | { kind: "p"; text: string }
+  | { kind: "ul" | "ol"; items: string[] }
+  | { kind: "code"; text: string }
+  | { kind: "table"; header: string[]; rows: string[][] };
 
 const BULLET = /^\s*[-*•]\s+(.*)$/;
 const NUMBERED = /^\s*\d+[.)]\s+(.*)$/;
+const FENCE = /^\s*```/;
+const TABLE_ROW = /^\s*\|.*\|\s*$/;
+const TABLE_RULE = /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$/;
+const cells = (row: string) => row.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
 
 export function parseBlocks(src: string): Block[] {
   const blocks: Block[] = [];
@@ -15,7 +23,27 @@ export function parseBlocks(src: string): Block[] {
     if (para.length) blocks.push({ kind: "p", text: para.join(" ") });
     para = [];
   };
-  for (const raw of src.replace(/\r\n/g, "\n").split("\n")) {
+  const lines = src.replace(/\r\n/g, "\n").split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i];
+    if (FENCE.test(raw)) {
+      // ``` code block: kept verbatim until the closing fence (or the end of the reply)
+      flush();
+      const code: string[] = [];
+      while (++i < lines.length && !FENCE.test(lines[i])) code.push(lines[i]);
+      blocks.push({ kind: "code", text: code.join("\n") });
+      continue;
+    }
+    if (TABLE_ROW.test(raw) && i + 1 < lines.length && TABLE_RULE.test(lines[i + 1])) {
+      // | header | row, a |---| rule, then | cell | rows
+      flush();
+      const header = cells(raw);
+      const rows: string[][] = [];
+      i += 1;
+      while (i + 1 < lines.length && TABLE_ROW.test(lines[i + 1])) rows.push(cells(lines[++i]));
+      blocks.push({ kind: "table", header, rows });
+      continue;
+    }
     const line = raw.replace(/^#{1,6}\s+/, ""); // headings are not used; show them as plain text
     const b = BULLET.exec(line);
     const n = b ? null : NUMBERED.exec(line);
@@ -31,7 +59,7 @@ export function parseBlocks(src: string): Block[] {
     } else {
       const last = blocks[blocks.length - 1];
       // an indented continuation line belongs to the previous list item
-      if (!para.length && last && last.kind !== "p" && /^\s{2,}\S/.test(raw)) last.items[last.items.length - 1] += " " + line.trim();
+      if (!para.length && last && (last.kind === "ul" || last.kind === "ol") && /^\s{2,}\S/.test(raw)) last.items[last.items.length - 1] += " " + line.trim();
       else para.push(line.trim());
     }
   }
@@ -92,7 +120,24 @@ export function Markdown({ text, terms, onTerm }: { text: string; terms?: TermLi
   return (
     <>
       {parseBlocks(text).map((b, i) =>
-        b.kind === "p" ? (
+        b.kind === "code" ? (
+          <pre key={i} className="pn-asst__code">
+            <code>{b.text}</code>
+          </pre>
+        ) : b.kind === "table" ? (
+          <div key={i} className="pn-asst__table">
+            <table>
+              <thead>
+                <tr>{b.header.map((h, j) => <th key={j}>{inline(h, l)}</th>)}</tr>
+              </thead>
+              <tbody>
+                {b.rows.map((r, j) => (
+                  <tr key={j}>{r.map((c, k) => <td key={k}>{inline(c, l)}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : b.kind === "p" ? (
           <p key={i}>{inline(b.text, l)}</p>
         ) : b.kind === "ul" ? (
           <ul key={i}>{b.items.map((it, j) => <li key={j}>{inline(it, l)}</li>)}</ul>

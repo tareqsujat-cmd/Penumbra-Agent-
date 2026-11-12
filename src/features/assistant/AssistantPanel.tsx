@@ -7,7 +7,7 @@ import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from 
 import { getState, setState, subscribe, useApp, type AppState, type Mode } from "../../state/store";
 import { useRisk, useVisibility } from "../../hooks/useMission";
 import { api, ApiError, enduranceByDay, siteSync } from "../../api/client";
-import { askAssistant, assistantStatus, type AssistantStatus, type ChatTurn } from "../../api/assistant";
+import { askAssistant, assistantStatus, chatWithSpaceAssistant, type AssistantStatus, type ChatTurn } from "../../api/assistant";
 import { buildParams, buildSnapshot, clearLiveMetrics, getLiveMetrics, setLiveMetrics } from "./snapshot";
 import { activityFor, greeting, matchIntent, menuChips, nextStepIndex, respond, TOUR_STEPS, tourStep, type Chip, type GuideReply, type Intent } from "./guide/engine";
 import { reaction } from "./guide/nlu";
@@ -34,6 +34,8 @@ interface Msg extends HistoryMsg {
   activity?: string;
   /** analyses run for this reply (AI assistant) */
   tools?: string[];
+  /** a small label above the reply, e.g. "Space assistant" */
+  tag?: string;
 }
 
 const SUGGESTIONS: Record<Mode, string[]> = {
@@ -389,6 +391,23 @@ export function AssistantPanel() {
     else send(`What does “${word}” mean?`);
   }
 
+  /** A question the built-in guide doesn't recognise: ask the space assistant (an LLM such as Groq's, via the server)
+   *  with the whole session so far, and show its markdown reply, or a friendly error, in the chat. */
+  async function askSpaceAssistant(q: string) {
+    if (busyRef.current) return;
+    const history: ChatTurn[] = [...toHistory(msgs), { role: "user", content: q }];
+    setMsgs((m) => [...m, { role: "user", content: q } as Msg, { role: "assistant", content: "", pending: true, activity: "Asking the space assistant…" } as Msg].slice(-MAX_MSGS));
+    setInput("");
+    setBusy(true);
+    const r = await chatWithSpaceAssistant(history);
+    const reply: Msg =
+      "reply" in r
+        ? { role: "assistant", content: r.reply, tag: "Space assistant" }
+        : { role: "assistant", content: "", tag: "Space assistant", error: r.error, chips: menuChips(getState()).slice(0, 4) };
+    setMsgs((all) => [...all.slice(0, -1), reply]);
+    setBusy(false);
+  }
+
   // ------------------------------------------------------------------ both modes
   async function send(text: string) {
     const q = text.trim();
@@ -397,6 +416,7 @@ export function AssistantPanel() {
       if (handleReaction(q)) return;
       const intent = matchIntent(q);
       if (intent) return ask(intent, q);
+      if (status.chat?.configured) return askSpaceAssistant(q); // anything else goes to the LLM provider
       setMsgs((m) => [...m, { role: "user", content: q } as Msg]);
       post({ text: GUIDE_FALLBACK, chips: menuChips(getState()) });
       setInput("");
@@ -562,6 +582,7 @@ export function AssistantPanel() {
               <>
                 {m.progress && <TourProgress {...m.progress} />}
                 {m.proactive && !m.progress && <div className="pn-asst__tip-tag">Tip</div>}
+                {m.tag && <div className="pn-asst__tip-tag">{m.tag}</div>}
                 {m.content && <Markdown text={m.content} terms={terms} onTerm={onTerm} />}
                 {m.pending && (
                   <p className="pn-asst__typing" aria-label={m.activity ?? "Typing"}>

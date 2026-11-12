@@ -70,3 +70,19 @@ describe("assistant snapshot", () => {
     expect(snap.site).toBeUndefined();
   });
 });
+
+describe("assistant markdown: code blocks and tables", () => {
+  it("renders fenced code verbatim and pipe tables as tables", () => {
+    const md = "Here:\n\n```cpp\nint main() { return 0; }\n```\n\n| Theme | Why |\n|---|---|\n| **Early Universe** | first galaxies |\n| Exoplanets | atmospheres |";
+    expect(parseBlocks(md).map((b) => b.kind)).toEqual(["p", "code", "table"]);
+    const { container } = render(<Markdown text={md} />);
+    expect(container.querySelector("pre code")?.textContent).toBe("int main() { return 0; }");
+    expect(Array.from(container.querySelectorAll("th")).map((t) => t.textContent)).toEqual(["Theme", "Why"]);
+    expect(container.querySelectorAll("tbody tr").length).toBe(2);
+    expect(container.querySelector("td strong")?.textContent).toBe("Early Universe");
+  });
+  it("keeps an unclosed code fence and plain pipes in text safe", () => {
+    expect(parseBlocks("```\nlast line").map((b) => b.kind)).toEqual(["code"]);
+    expect(parseBlocks("a | b is not a table").map((b) => b.kind)).toEqual(["p"]);
+  });
+});

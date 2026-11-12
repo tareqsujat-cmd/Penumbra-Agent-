@@ -587,3 +587,36 @@ body.pn-whatsthis * {
   box-shadow: 0 0 0 1.5px rgba(var(--solar-rgb), 0.55), 0 0 10px rgba(var(--solar-rgb), 0.3);
   user-select: none;
 }
+
+/* code blocks and tables in chat replies */
+.pn-asst__code {
+  margin: 0 0 var(--sp-3);
+  padding: 8px 10px;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  background: var(--surface-inset);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre;
+}
+.pn-asst__table {
+  margin: 0 0 var(--sp-3);
+  overflow-x: auto;
+}
+.pn-asst__table table {
+  border-collapse: collapse;
+  font-size: var(--fs-xs);
+}
+.pn-asst__table th,
+.pn-asst__table td {
+  padding: 4px 8px;
+  border: 1px solid var(--border-default);
+  text-align: left;
+  vertical-align: top;
+}
+.pn-asst__table th {
+  background: var(--surface-raised);
+  font-weight: 600;
+}

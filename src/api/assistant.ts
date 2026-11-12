@@ -10,6 +10,8 @@ export interface AssistantStatus {
   available: boolean;
   reason: string;
   model?: string;
+  /** the space assistant chat (an OpenAI-compatible LLM provider, Groq by default): set up on the server or not */
+  chat?: { configured: boolean; model: string };
 }
 
 export type AssistantEvent =
@@ -93,4 +95,21 @@ export async function askAssistant(
     }
   }
   if (!finished) onEvent({ type: "error", message: "The reply was interrupted. Try again." });
+}
+
+/** Space assistant (an LLM provider such as Groq, via the server's POST /api/chat): the session's messages in, one markdown reply
+ *  out. Errors come back as friendly messages to show in the chat; the token never leaves the server. */
+export async function chatWithSpaceAssistant(messages: ChatTurn[]): Promise<{ reply: string } | { error: string }> {
+  try {
+    const r = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages }),
+    });
+    const j = await r.json().catch(() => null);
+    if (r.ok && j && typeof j.reply === "string") return { reply: j.reply };
+    return { error: j?.error?.message ?? `The space assistant couldn't answer (HTTP ${r.status}).` };
+  } catch {
+    return { error: "The space assistant couldn't be reached. Is the Penumbra server running?" };
+  }
 }

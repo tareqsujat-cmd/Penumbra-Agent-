@@ -16,3 +16,5 @@ pyproj==3.8.0
 playwright==1.63.0
 # assistant (Claude API)
 anthropic==2.8.0
+# space assistant chat (any OpenAI-compatible provider; Groq by default)
+openai==3.49.0

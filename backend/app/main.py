@@ -27,6 +27,7 @@ from starlette.concurrency import run_in_threadpool
 
 from . import config
 from .assistant import agent as AG
+from .assistant import llm_chat as LC
 from .schemas import CompareRequest, EnduranceRequest, RiskRequest, RobustRequest, VisibilityRequest
 from .science import coordinates as C
 from .science import dsn as D
@@ -231,7 +232,17 @@ def dsn_info():
 # ---------------------------------------------------------------------------------------------- assistant
 @app.get("/api/assistant/status")
 def assistant_status():
-    return AG.status()
+    return {**AG.status(), "chat": LC.status()}
+
+
+@app.post("/api/chat")
+async def chat(req: LC.ChatRequest):
+    """Space assistant: the conversation in, one reply out (not streamed). The LLM API key stays here."""
+    try:
+        reply = await run_in_threadpool(LC.chat, req)
+    except LC.ChatError as e:
+        return _err(e.status, e.code, e.message)
+    return {"reply": reply, "model": LC.model()}
 
 
 @app.post("/api/assistant")

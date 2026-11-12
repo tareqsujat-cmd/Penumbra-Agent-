@@ -11,7 +11,7 @@ def _load_dotenv(path: Path) -> None:
     """KEY=VALUE lines from .env (git-ignored) for variables not already set; comments and blanks are skipped."""
     if not path.is_file():
         return
-    for line in path.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8-sig").splitlines():  # tolerate a byte-order mark (Windows editors)
         line = line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue

@@ -25,18 +25,20 @@ never changes anything on its own: it suggests a change, you click **Do it for m
 
 ---
 
-## Two modes
+## How Armstrong answers
 
-| | **Built-in guide** (default) | **AI assistant** (optional) |
-|---|---|---|
-| What it is | A scripted guide written for non-specialists: no AI involved | Claude (Anthropic's model), answering in natural language |
-| Cost | Free | Pay-as-you-go Claude API usage |
-| Internet | Not needed: works fully offline | Needed |
-| Understands | Buttons, plus common typed questions and requests | Any question |
-| Turns on | Always, unless the AI assistant is available | When the server has `ANTHROPIC_API_KEY` set |
+| | **Built-in guide** (default) | **Space assistant** (free LLM chat) | **AI assistant** (optional) |
+|---|---|---|---|
+| What it is | A scripted guide written for non-specialists: no AI involved | An open-source model (default `openai/gpt-oss-120b` on Groq) answering space and app questions | Claude (Anthropic's model), with tools that run Penumbra's analyses |
+| Cost | Free | Free tier (Groq; rate-limited) or any OpenAI-compatible provider | Pay-as-you-go Claude API usage |
+| Internet | Not needed: works fully offline | Needed | Needed |
+| Answers | Buttons, plus common typed questions and requests | Typed questions the built-in guide doesn't recognise | Any question |
+| Turns on | Always | When the server has `LLM_API_KEY` set | When the server has `ANTHROPIC_API_KEY` set (the panel then switches to it) |
 
-The panel picks the mode automatically: if the server reports that the AI assistant is available it uses it,
-otherwise it uses the built-in guide. Both modes share the same change cards (**Do it for me** / **Apply**).
+Without a Claude key, the panel uses the built-in guide, and hands only the typed questions it doesn't recognise
+(for example "What is the James Webb Space Telescope looking for?") to the space assistant. Its replies appear in
+the same conversation under a small *Space assistant* label. The guide and the Claude assistant share the same
+change cards (**Do it for me** / **Apply**).
 
 ---
 
@@ -231,7 +233,34 @@ ANTHROPIC_API_KEY=sk-ant-...
 | `PENUMBRA_ASSISTANT` | `1` | `0` switches the AI assistant off |
 | `PENUMBRA_OFFLINE` | `0` | `1` also switches it off (the built-in guide keeps working) |
 
-`GET /api/assistant/status` reports whether the AI assistant is available and why not.
+`GET /api/assistant/status` reports whether the AI assistant is available and why not, and whether the space
+assistant is set up (never any key).
+
+### Space assistant (free LLM chat)
+
+The space assistant calls any provider with an OpenAI-compatible API from the server (`POST /api/chat`, code in
+`backend/app/assistant/llm_chat.py`), so the key never reaches the browser. Set three lines in `.env` and restart:
+
+```
+LLM_BASE_URL=https://api.groq.com/openai/v1
+LLM_API_KEY=gsk_...            # from https://console.groq.com/keys (free tier, no credit card)
+LLM_MODEL=openai/gpt-oss-120b
+```
+
+Switching provider is a matter of changing those lines: `.env.example` lists Gemini, OpenRouter (models ending in
+`:free`) and Ollama (local) as alternatives. Each question sends a system prompt (who the assistant is, Penumbra's
+features, "say so if unsure", "steer off-topic questions back to space") plus the last 10 messages, with replies
+capped at 500 tokens and `temperature` 0.7. Errors are shown in the chat as plain messages: invalid key (401), rate
+limit, so wait a minute (429, not retried automatically), model not found (404), or a generic error.
+
+### Terminal chatbot
+
+`scripts/space_chat_cli.py` is the same chat in the terminal, a quick way to check a key and model:
+
+```bash
+pip install openai python-dotenv     # already in the project environment
+python scripts/space_chat_cli.py     # reads LLM_BASE_URL, LLM_API_KEY, LLM_MODEL from .env; type exit to leave
+```
 
 ---
 
@@ -240,6 +269,7 @@ ANTHROPIC_API_KEY=sk-ant-...
 ```bash
 npx vitest run tests/frontend          # includes the guide, panel, change cards, undo and explanations
 python -m pytest tests/api/test_assistant.py tests/api/test_assistant_tools.py   # AI endpoint and tools
+python -m pytest tests/api/test_chat.py                                          # space assistant chat
 ```
 
 The frontend tests cover typed-text understanding, the plain-language explanations, the walkthrough and its
@@ -257,3 +287,5 @@ science calls replaced so they run without data or an API key.
   chosen by the user, geometric (not scheduled) DSN contact and a simplified battery estimate. See *Limitations* in
   [PENUMBRA.md](PENUMBRA.md).
 - The AI assistant needs internet access and costs money per question; the built-in guide is free and offline.
+- The space assistant answers from the model's general knowledge, not from Penumbra's calculations, and models can
+  get facts wrong. Free tiers are rate-limited: if many questions arrive quickly, it asks you to wait a minute.
