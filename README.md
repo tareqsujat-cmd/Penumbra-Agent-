@@ -13,7 +13,9 @@ landing (students, members of the public, judges) as well as mission planners to
 2. **make choices**: site, landing date, landing accuracy, how careful to be, where to aim, vehicle;
 3. **understand the results**: what the numbers mean for their mission, in plain words.
 
-Armstrong never invents numbers: everything it says about a mission comes from Penumbra's own calculations. And it
+When Armstrong talks about *your mission*, its numbers come only from Penumbra's own calculations, never invented.
+General space questions it doesn't handle itself ("What is the James Webb Space Telescope looking for?") can go to
+an optional **space assistant**, a free hosted AI model that answers from its general knowledge. And Armstrong
 never changes anything on its own: it suggests a change, you click **Do it for me**, and you can **Undo** it.
 
 | Document | What it covers |
@@ -61,7 +63,7 @@ python tasks.py dev                                     # open http://127.0.0.1:
 ```
 
 Armstrong's built-in guide works straight away: no key, no account, no internet needed once the data is
-downloaded. To add the optional AI assistant, see [Setup](#setup).
+downloaded. To add the free space assistant (a Groq key) or the optional Claude assistant, see [Setup](#setup).
 
 **If `tasks.py data` reports a checksum mismatch for `earth_latest_high_prec.bpc`:** NASA's NAIF team republishes
 this Earth-orientation file regularly, so the checksum recorded in the project goes out of date. The app needs the
@@ -168,6 +170,10 @@ follows the same rule and never computes science in the browser. Its numbers com
   `POST /api/endurance` (for example, "what if I land on 15 July?" calls `/api/visibility` for both dates).
 
 Answers state the settings they used (site, date, landing zone, caution level) so it's clear what was computed.
+
+The exception is the **space assistant**: it doesn't see your mission's numbers and answers general space questions
+from the AI model's own knowledge, so its replies carry a *Space assistant* label (see
+[Space assistant](#space-assistant-free-llm-chat)).
 
 ### Built-in guide: the pieces
 All in `src/features/assistant/guide/`, plain TypeScript, no AI and no network beyond Penumbra's own server.
